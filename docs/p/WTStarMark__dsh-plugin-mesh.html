@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#WTStarMark__dsh-plugin-mesh">this plugin in the registry</a></p>
   <p>WTStarMark/dsh-plugin-mesh is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, reads credential-class env vars.</p>
   <p class="lede"><b>No dsh integration found — this repository carries the dsh-plugin topic but shows no sign of connecting to dsh</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. tools/seed-fixture.mjs:11, tools/seed-fixture.mjs:11</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. tools/serve.mjs:543</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>NEW_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×5 in authored code, e.g. tools/admin.mjs:13, tools/admin.mjs:321</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. tools/serve.mjs:779</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>ADMIN_COOKIE_SECURE, ADMIN_PASSWORD, ADMIN_PASSWORD_HASH, NEW_TOKEN</td></tr></tbody></table>
   
   
   <h2>Outbound domains</h2><p class="kv"><span>api.github.com</span> <span>avatars.githubusercontent.com</span> <span>www.moc-chen.cn</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>ALLOW_HOSTS</span> <span>NEW_TOKEN</span> <span>DAY_TZ_OFFSET_HOURS</span> <span>DSH_ROOT</span> <span>HEAD_NODES</span> <span>SITE_URL</span> <span>PORT</span> <span>HOST</span> <span>STATS_FILE</span> <span>RATE_LIMIT_MAX</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>ALLOW_HOSTS</span> <span>ADMIN_DIR</span> <span>BLACKLIST_FILE</span> <span>TRUST_PROXY</span> <span>NEW_TOKEN</span> <span>ADMIN_PATH</span> <span>ADMIN_PASSWORD_HASH</span> <span>ADMIN_PASSWORD</span> <span>ADMIN_COOKIE_SECURE</span> <span>PYTHON</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

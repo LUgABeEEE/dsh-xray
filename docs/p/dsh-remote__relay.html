@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dsh-remote/relay — capability card (C2) · dsh-xray</title>
-<meta name="description" content="dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, reads credential-class env vars.">
+<meta name="description" content="dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes commands in development tooling the package does not ship, starts a network server, reads credential-class env vars in development tooling the package does not ship.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/dsh-remote__relay.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dsh-remote/relay — dsh plugin capability card">
-<meta property="og:description" content="dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, reads credential-class env vars.">
+<meta property="og:description" content="dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes commands in development tooling the package does not ship, starts a network server, reads credential-class env vars in development tooling the package does not ship.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/dsh-remote__relay.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "relay", "identifier": "dsh-remote/relay", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, reads credential-class env vars.", "codeRepository": "https://github.com/dsh-remote/relay", "url": "https://unstone.github.io/dsh-xray/p/dsh-remote__relay.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "relay", "identifier": "dsh-remote/relay", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes commands in development tooling the package does not ship, starts a network server, reads credential-class env vars in development tooling the package does not ship.", "codeRepository": "https://github.com/dsh-remote/relay", "url": "https://unstone.github.io/dsh-xray/p/dsh-remote__relay.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>dsh-remote/relay</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">零知识 WebSocket 中继：只做路由，不碰载荷明文。可自托管的单文件产物。</p>
+  <p class="lede">Zero-knowledge WebSocket relay for DSH Remote Control: routes sealed records between the host plugin and paired phones, never parses payloads. Single-file bundle, self-hostable, Docker image. 零知识 WebS</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/dsh-remote/relay" rel="nofollow ugc">dsh-remote/relay source on GitHub</a>
      · <a href="../registry.html#dsh-remote__relay">this plugin in the registry</a></p>
-  <p>dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, reads credential-class env vars.</p>
+  <p>dsh-remote/relay is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes commands in development tooling the package does not ship, starts a network server, reads credential-class env vars in development tooling the package does not ship.</p>
   <p class="lede"><b>No dsh integration found — this repository carries the dsh-plugin topic but shows no sign of connecting to dsh</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×8 in authored code, e.g. scripts/loadtest-conns.mjs:30, scripts/loadtest-conns.mjs:30</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. src/server.ts:1409</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DRC_HOST_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×8 in development tooling the package does not ship, e.g. scripts/loadtest-conns.mjs:30, scripts/loadtest-conns.mjs:30</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. src/server.ts:1508</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: DRC_HOST_TOKEN</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DRC_HOST_TOKEN</span> <span>DRC_URL</span> <span>DSH_PROFILE</span> <span>DRC_PORT</span> <span>DRC_BIND</span> <span>DRC_LOG_LEVEL</span> <span>DRC_PAIR_TTL_MS</span></p>
+  
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
