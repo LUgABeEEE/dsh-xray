@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>ItQianChen/dsh-github-flow</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">基于 GitHub CLI (gh) 为 DeepSeek Harness (DSH) 打造的现代化原生工作流集成插件。 深度打通本地 Git 仓库开发与远程 GitHub 协作（PR、Issue、Actions CI 诊断与代码审查），兼备 Agent 模型工具、人类 Slash 指令以及原生 Web UI 双重视图。</p>
+  <p class="lede">让 DeepSeek Harness Agent 拥有操作 GitHub 的原生手脚！原生复用 gh CLI 安全凭证，支持 PR 自动创建与审查、CI 失败诊断修复、三维待办 Issues、SWR 0ms 秒开全景驾驶舱。</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/ItQianChen/dsh-github-flow" rel="nofollow ugc">ItQianChen/dsh-github-flow source on GitHub</a>
      · <a href="../registry.html#ItQianChen__dsh-github-flow">this plugin in the registry</a></p>
   <p>ItQianChen/dsh-github-flow is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×4 in authored code, e.g. src/executor.ts:1, src/api/routes.ts:1</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. scripts/generate-release-notes.mjs:2, scripts/generate-release-notes.mjs:2</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>commands</span> <span>layout</span> <span>sessions</span> <span>sidebarRightTabs</span> <span>slots</span> <span>theme</span> <span>tools</span> <span>webServer</span> <span>workspaceRegistry</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>theme/change</span></p>
-  <h2>Outbound domains</h2><p class="kv"><span>cli.github.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_SESSION_ID</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>cli.github.com</span> <span>registry.npmmirror.com</span> <span>www.npmjs.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_SESSION_ID</span> <span>DSH_PROFILE</span> <span>DSH_PROFILE_DIR</span> <span>DSH_HOME</span> <span>ComSpec</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

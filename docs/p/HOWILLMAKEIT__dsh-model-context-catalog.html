@@ -45,16 +45,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>HOWILLMAKEIT/dsh-model-context-catalog</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DeepSeek Harness 插件：维护 llm-pi-ai 模型的准确上下文窗口，避免长会话被误判为上下文溢出。</p>
+  <p class="lede">DeepSeek Harness 插件：一键匹配模型上下文窗口，展示容量来源，支持勾选批量配置、已有窗口管理和手动编辑。</p>
   <p class="lede">★ 10+ ·
      <a href="https://github.com/HOWILLMAKEIT/dsh-model-context-catalog" rel="nofollow ugc">HOWILLMAKEIT/dsh-model-context-catalog source on GitHub</a>
      · <a href="../registry.html#HOWILLMAKEIT__dsh-model-context-catalog">this plugin in the registry</a></p>
   <p>HOWILLMAKEIT/dsh-model-context-catalog is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, executes commands in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×6 in development tooling the package does not ship, e.g. scripts/lint.mjs:9, scripts/lint.mjs:9</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>configForms</span> <span>locale</span> <span>settings</span> <span>slots</span></p>
+  <h2>Services it injects</h2><p class="kv"><span>configForms</span> <span>locale</span> <span>remote</span> <span>settings</span> <span>slots</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>app-boot/config-reload</span> <span>loader/volatile-update</span> <span>settings/document-updated</span></p>
-  
+  <h2>Outbound domains</h2><p class="kv"><span>models.dev</span></p>
   
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
