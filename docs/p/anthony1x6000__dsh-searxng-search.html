@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#anthony1x6000__dsh-searxng-search">this plugin in the registry</a></p>
   <p>anthony1x6000/dsh-searxng-search is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. index.ts:27</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>SEARXNG_SECRET</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. index.ts:36</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>SEARXNG_SECRET</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>web</span></p>
   
   <h2>Outbound domains</h2><p class="kv"><span>docs.searxng.org</span> <span>searx.example.org</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>SEARXNG_START_TIMEOUT_MS</span> <span>SEARXNG_PORT</span> <span>SEARXNG_CONTAINER</span> <span>SEARXNG_CLI</span> <span>SEARXNG_AUTO_CREATE</span> <span>SEARXNG_IMAGE</span> <span>SEARXNG_DATA_DIR</span> <span>SEARXNG_SECRET</span> <span>SEARXNG_BASE_URL</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>SEARXNG_START_TIMEOUT_MS</span> <span>SEARXNG_PORT</span> <span>SEARXNG_CONTAINER</span> <span>SEARXNG_CLI</span> <span>SEARXNG_AUTO_CREATE</span> <span>SEARXNG_IMAGE</span> <span>SEARXNG_DATA_DIR</span> <span>SEARXNG_DETACH</span> <span>SEARXNG_SECRET</span> <span>SEARXNG_BASE_URL</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

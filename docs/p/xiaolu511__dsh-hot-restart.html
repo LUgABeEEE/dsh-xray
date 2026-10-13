@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>xiaolu511/dsh-hot-restart</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DSH 热重启插件：窗口内一个固定按钮，一键关闭并自动重开 DeepSeek Harness，全程零控制台窗口 · Hot-restart plugin for DSH: one fixed in-window button that relaunches the app automatically, no console window</p>
+  <p class="lede">DSH 热重启插件：窗口内一个固定按钮，一键关闭并自动重开 DeepSeek Harness，全程零控制台窗口；内置自检系统，出问题点一下就能生成可直接定位的诊断报告 · Hot-restart plugin for DSH, with a built-in self-check that writes a one-file diagnostic report</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/xiaolu511/dsh-hot-restart" rel="nofollow ugc">xiaolu511/dsh-hot-restart source on GitHub</a>
      · <a href="../registry.html#xiaolu511__dsh-hot-restart">this plugin in the registry</a></p>
   <p>xiaolu511/dsh-hot-restart is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, base64 decoding in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×5 in build output only, e.g. lib/index.js:17, lib/index.js:17</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/index.js:119</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×7 in build output only, e.g. lib/index.js:17, lib/index.js:17</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/index.js:121</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>SystemRoot</span> <span>USERPROFILE</span> <span>DSH_HOME</span> <span>DSH_HOT_RESTART_HOME</span> <span>DSH_WEB_URL</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>SystemRoot</span> <span>USERPROFILE</span> <span>DSH_HOME</span> <span>DSH_HOT_RESTART_HOME</span> <span>APPDATA</span> <span>LOCALAPPDATA</span> <span>DSH_WEB_URL</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
