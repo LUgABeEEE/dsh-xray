@@ -46,12 +46,12 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede"></p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/ljwzhaoxiaoniu/DLR" rel="nofollow ugc">ljwzhaoxiaoniu/DLR source on GitHub</a>
      · <a href="../registry.html#ljwzhaoxiaoniu__DLR">this plugin in the registry</a></p>
   <p>ljwzhaoxiaoniu/DLR is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server, reads credential-class env vars.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>[&#x27;./cordis.patch.yml&#x27;, &#x27;./presets/dlr.patch.yml&#x27;]</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×12 in authored code, e.g. TSM Core Service/bin/tsm.mjs:13, TSM Core Service/bin/tsm.mjs:35</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×5 in authored code, e.g. TSM Core Service/src/mcp/server.ts:115, TSM Core Service/src/mcp/server.ts:251</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DEEPSEEK_API_KEY, NEO4J_PASSWORD</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×12 in authored code, e.g. TSM Core Service/bin/tsm.mjs:13, TSM Core Service/bin/tsm.mjs:35</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×5 in authored code, e.g. TSM Core Service/src/mcp/server.ts:133, TSM Core Service/src/mcp/server.ts:269</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DEEPSEEK_API_KEY, NEO4J_PASSWORD</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span></p>
   
   <h2>Outbound domains</h2><p class="kv"><span>hf-mirror.com</span></p>
