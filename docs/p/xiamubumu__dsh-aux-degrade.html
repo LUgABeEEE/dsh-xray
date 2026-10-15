@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>xiamubumu/dsh-aux-degrade</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">Auxiliary-model degradation guard for DSH 1.5: keeps side calls cheap (reasoning effort off, token floor, tool stripping) without touching the main loop.</p>
+  <p class="lede">DSH 1.5 辅助模型降级：让压缩摘要、会话标题这类旁路调用更省更完整，主循环零影响。仅支持 DSH 1.5，后续会跟进更新。 / Auxiliary-model degradation for DSH 1.5: cheaper, complete side calls (reasoning off, token floor, tools stripped). DSH 1.5 only; new</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/xiamubumu/dsh-aux-degrade" rel="nofollow ugc">xiamubumu/dsh-aux-degrade source on GitHub</a>
      · <a href="../registry.html#xiamubumu__dsh-aux-degrade">this plugin in the registry</a></p>
   <p>xiamubumu/dsh-aux-degrade is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. verify.mjs:19, verify.mjs:19</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_AUX_MAXTOKENS_FLOOR</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>llm</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×6 in authored code, e.g. index.js:407, index.js:410</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_AUX_MAXTOKENS_FLOOR</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>llm</span> <span>slots</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>llm/stream</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_AUX_MAXTOKENS_FLOOR</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>APPDATA</span> <span>DSH_HOME</span> <span>DSH_AUX_MAXTOKENS_FLOOR</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
