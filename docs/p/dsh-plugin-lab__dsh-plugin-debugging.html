@@ -45,14 +45,14 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>dsh-plugin-lab/dsh-plugin-debugging</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">For DSH plugin development: runtime diagnostics and in-place fixes your agent can run itself.</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">Your DSH agent can now inspect, diagnose, and fix its own runtime. | 你的 DSH agent 能检查、诊断并修复它身处的运行时了。</p>
+  <p class="lede">★ 5+ ·
      <a href="https://github.com/dsh-plugin-lab/dsh-plugin-debugging" rel="nofollow ugc">dsh-plugin-lab/dsh-plugin-debugging source on GitHub</a>
      · <a href="../registry.html#dsh-plugin-lab__dsh-plugin-debugging">this plugin in the registry</a></p>
   <p>dsh-plugin-lab/dsh-plugin-debugging is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×2 in authored code, e.g. src/tools/dsh_restart.ts:1431, src/tools/shared.ts:244</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>tools</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×2 in authored code, e.g. src/tools/dsh_restart.ts:1512, src/tools/shared.ts:244</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span> <span>tools</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/created</span></p>
   
   

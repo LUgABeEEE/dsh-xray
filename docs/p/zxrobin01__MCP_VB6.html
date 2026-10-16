@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zxrobin01/MCP_VB6 — capability card (C2) · dsh-xray</title>
-<meta name="description" content="zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands.">
+<meta name="description" content="zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, reads credential-class env vars.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/zxrobin01__MCP_VB6.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zxrobin01/MCP_VB6 — dsh plugin capability card">
-<meta property="og:description" content="zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands.">
+<meta property="og:description" content="zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, reads credential-class env vars.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/zxrobin01__MCP_VB6.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MCP_VB6", "identifier": "zxrobin01/MCP_VB6", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands.", "codeRepository": "https://github.com/zxrobin01/MCP_VB6", "url": "https://unstone.github.io/dsh-xray/p/zxrobin01__MCP_VB6.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MCP_VB6", "identifier": "zxrobin01/MCP_VB6", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, reads credential-class env vars.", "codeRepository": "https://github.com/zxrobin01/MCP_VB6", "url": "https://unstone.github.io/dsh-xray/p/zxrobin01__MCP_VB6.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 0 ·
      <a href="https://github.com/zxrobin01/MCP_VB6" rel="nofollow ugc">zxrobin01/MCP_VB6 source on GitHub</a>
      · <a href="../registry.html#zxrobin01__MCP_VB6">this plugin in the registry</a></p>
-  <p>zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands.</p>
+  <p>zxrobin01/MCP_VB6 is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, reads credential-class env vars.</p>
   <p class="lede"><b>No dsh integration found — this repository carries the dsh-plugin topic but shows no sign of connecting to dsh</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×7 in authored code, e.g. bridge/vb6mcp_hub.mjs:22, bridge/vb6mcp_hub.mjs:22</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×7 in authored code, e.g. bridge/vb6mcp_hub.mjs:22, bridge/vb6mcp_hub.mjs:22</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>VB6MCP_TOKEN, VB6MCP_TOKEN_FILE</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>VB6MCP_VB6EXE</span> <span>VB6MCP_AUTOSTART_PROJECT</span> <span>VB6MCP_FORWARD_TIMEOUT_MS</span> <span>VB6MCP_ADDIN_PATH</span> <span>VB6MCP_REMOTE_PROBE_TIMEOUT_MS</span> <span>VB6MCP_REMOTE_FORWARD_TIMEOUT_MS</span> <span>VB6MCP_REMOTE_TTL_MS</span> <span>VB6MCP_REMOTE_GRACE_MS</span> <span>VB6MCP_REMOTES</span> <span>VB6MCP_LESSONS_PY</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>VB6MCP_TOKEN_FILE</span> <span>VB6MCP_VB6EXE</span> <span>VB6MCP_AUTOSTART_PROJECT</span> <span>VB6MCP_BRIDGE</span> <span>VB6MCP_BRIDGE_URL</span> <span>VB6MCP_BRIDGE_HEALTH_TTL_MS</span> <span>VB6MCP_BRIDGE_LIST_TIMEOUT_MS</span> <span>VB6MCP_BRIDGE_CALL_TIMEOUT_MS</span> <span>VB6MCP_TOKEN</span> <span>VB6MCP_FORWARD_TIMEOUT_MS</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

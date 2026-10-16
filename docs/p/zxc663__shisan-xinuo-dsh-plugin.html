@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zxc663/shisan-xinuo-dsh-plugin — capability card (C3) · dsh-xray</title>
-<meta name="description" content="zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can rewrite the system prompt, gates tool execution, executes system commands, reads credential-class env vars.">
+<meta name="description" content="zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, gates tool execution, executes system commands.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/zxc663__shisan-xinuo-dsh-plugin.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zxc663/shisan-xinuo-dsh-plugin — dsh plugin capability card">
-<meta property="og:description" content="zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can rewrite the system prompt, gates tool execution, executes system commands, reads credential-class env vars.">
+<meta property="og:description" content="zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, gates tool execution, executes system commands.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/zxc663__shisan-xinuo-dsh-plugin.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "shisan-xinuo-dsh-plugin", "identifier": "zxc663/shisan-xinuo-dsh-plugin", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can rewrite the system prompt, gates tool execution, executes system commands, reads credential-class env vars.", "codeRepository": "https://github.com/zxc663/shisan-xinuo-dsh-plugin", "url": "https://unstone.github.io/dsh-xray/p/zxc663__shisan-xinuo-dsh-plugin.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "shisan-xinuo-dsh-plugin", "identifier": "zxc663/shisan-xinuo-dsh-plugin", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, gates tool execution, executes system commands.", "codeRepository": "https://github.com/zxc663/shisan-xinuo-dsh-plugin", "url": "https://unstone.github.io/dsh-xray/p/zxc663__shisan-xinuo-dsh-plugin.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 0 ·
      <a href="https://github.com/zxc663/shisan-xinuo-dsh-plugin" rel="nofollow ugc">zxc663/shisan-xinuo-dsh-plugin source on GitHub</a>
      · <a href="../registry.html#zxc663__shisan-xinuo-dsh-plugin">this plugin in the registry</a></p>
-  <p>zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can rewrite the system prompt, gates tool execution, executes system commands, reads credential-class env vars.</p>
-  <p class="lede"><b>Not installable — has plugin code but no manifest to install it by</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, tools/pre-execute</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×28 in authored code, e.g. scripts/check-voice.mjs:4, scripts/check-voice.mjs:4</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>SHISANUO_ADV_CRED, SHISANUO_ADV_KEYENV, SHISANUO_ADV_MAXTOKENS, SHISANUO_CONCLUDE_ON_PASS</td></tr><tr><td>ships no manifest</td><td><code>no_manifest</code></td><td>uses 2 services, 1 tool regs, no manifest</td></tr></tbody></table>
+  <p>zxc663/shisan-xinuo-dsh-plugin is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, gates tool execution, executes system commands.</p>
+  <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, tools/pre-execute</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. src/shisan-xinuo-core.ts:4</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>SHISANUO_CONCLUDE_ON_PASS</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: OPENCODE_GO_API_KEY, SHISANUO_ADV_CRED, SHISANUO_ADV_KEYENV, SHISANUO_ADV_MAXTOKENS</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>systemPrompt</span> <span>tools</span></p>
-  <h2>Hooks it attaches</h2><p class="kv"><span>agent/created</span> <span>agent/disposed</span> <span>agent/turn-stopping</span> <span>session/event</span> <span>tools/pre-execute</span></p>
-  <h2>Outbound domains</h2><p class="kv"><span>open.bigmodel.cn</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>SHISANUO_DSH_BIN</span> <span>SHISANUO_DSH_HOME</span> <span>SHISANUO_NO_ASSERT</span> <span>SHISANUO_BUDGET_LEVEL</span> <span>SHISANUO_PROBE_TOOLS</span> <span>SHISANUO_CONCLUDE_ON_PASS</span> <span>SHISANUO_ADV_CRED</span> <span>SHISANUO_ADV_BASEURL</span> <span>SHISANUO_ADV_KEYENV</span> <span>SHISANUO_ADV_MAXTOKENS</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>agent/created</span> <span>agent/turn-stopping</span> <span>session/event</span> <span>tools/pre-execute</span></p>
+  
+  <h2>Environment variables it reads</h2><p class="kv"><span>SHISANUO_PROBE_TOOLS</span> <span>SHISANUO_CONCLUDE_ON_PASS</span> <span>SHISANUO_GATE_TIMEOUT_MS</span> <span>SHISANUO_NO_ASSERT</span> <span>SHISANUO_EFFECT_ASSERT</span> <span>SHISANUO_LOG_DIR</span> <span>SHISANUO_LOG_DISABLE</span> <span>SHISANUO_L3_OFF</span> <span>SHISANUO_ASSERT_LAYER</span> <span>SHISANUO_ZEROTOOL_GUARD</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
