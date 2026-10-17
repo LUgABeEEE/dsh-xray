@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>mili1360/dsh-session-vacuum</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">Fix for huge, slow-loading, OOM-ing DSH sessions: deletes the dead streaming fragments out of session logs on disk, so the next load is smaller. DeepSeek Harness plugin.</p>
+  <p class="lede">DSH 会话太大、加载越来越慢、最后 OOM 打不开？启动时清掉会话日志里没人读的流式碎片：实测 272 MB -&gt; 12 MB，843 万对象 -&gt; 不再撞内存上限，58 -&gt; 238 tok/s。DeepSeek Harness plugin that deletes dead streaming fragments so the next load is smaller.</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/mili1360/dsh-session-vacuum" rel="nofollow ugc">mili1360/dsh-session-vacuum source on GitHub</a>
      · <a href="../registry.html#mili1360__dsh-session-vacuum">this plugin in the registry</a></p>

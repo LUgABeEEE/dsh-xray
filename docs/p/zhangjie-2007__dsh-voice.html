@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>zhangjie-2007/dsh-voice</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DSH 插件：任务完成 / 需要你做选择时，用微软 Edge 神经语音播报（晓伊声线，本地缓存 mp3，零依赖）</p>
+  <p class="lede">DSH 插件：任务完成 / 需要你做选择 / 开始新对话时，用微软 Edge 神经语音播报（晓伊声线，本地缓存 mp3，零依赖，Windows）</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/zhangjie-2007/dsh-voice" rel="nofollow ugc">zhangjie-2007/dsh-voice source on GitHub</a>
      · <a href="../registry.html#zhangjie-2007__dsh-voice">this plugin in the registry</a></p>
@@ -53,7 +53,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×2 in build output only, e.g. lib/player.mjs:13, lib/player.mjs:67</td></tr></tbody></table>
   
-  <h2>Hooks it attaches</h2><p class="kv"><span>session/event</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>session/created</span> <span>session/event</span></p>
   
   <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>SystemRoot</span> <span>windir</span></p>
   <h2>How to read this</h2>

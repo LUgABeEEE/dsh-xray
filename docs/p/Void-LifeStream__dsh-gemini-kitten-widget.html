@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>Void-LifeStream/dsh-gemini-kitten-widget</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DSH 界面右下角的 Gemini 猫娘额度挂件：显示 Google Gemini API 免费层今日已用/剩余次数（20 次/模型/天，UTC 午夜重置），可按型号切换查看、按额度变色预警、拖拽吸附、点击换台词。</p>
+  <p class="lede">A Gemini kitten widget for the DSH Web UI: live Google Gemini API free-tier quota — today&#x27;s used and remaining requests per model (20/model/day, UTC midnight reset), model switcher, color-coded warnin</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/Void-LifeStream/dsh-gemini-kitten-widget" rel="nofollow ugc">Void-LifeStream/dsh-gemini-kitten-widget source on GitHub</a>
      · <a href="../registry.html#Void-LifeStream__dsh-gemini-kitten-widget">this plugin in the registry</a></p>
   <p>Void-LifeStream/dsh-gemini-kitten-widget is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, uses eval in development tooling the package does not ship, starts a network server in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×12 in development tooling the package does not ship, e.g. tools/shot.mjs:86, tools/shot.mjs:92</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×4 in development tooling the package does not ship, e.g. tools/shot.mjs:33, tools/shot.mjs:60</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×13 in development tooling the package does not ship, e.g. tools/shot.mjs:87, tools/shot.mjs:93</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×4 in development tooling the package does not ship, e.g. tools/shot.mjs:33, tools/shot.mjs:61</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSHK_LEDGER</span> <span>DSHK_SCAN_TTL_MS</span> <span>DSHK_QUOTA_PER_MODEL</span> <span>DSHK_QUOTA_TZ</span> <span>DSH_HOME</span> <span>DSHK_SESSIONS_DIR</span> <span>DSHK_PROBES</span> <span>DSHK_LINES</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSHK_LEDGER</span> <span>DSHK_SCAN_TTL_MS</span> <span>DSHK_QUOTA_PER_MODEL</span> <span>DSHK_QUOTA_TZ</span> <span>DSH_HOME</span> <span>DSHK_SESSIONS_DIR</span> <span>DSHK_PROBES</span> <span>DSHK_LINES</span> <span>DSHK_KNOWN_MODELS</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

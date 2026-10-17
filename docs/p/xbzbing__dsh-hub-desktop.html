@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>xbzbing/dsh-hub-desktop</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DSH 多实例管理工具</p>
+  <p class="lede">DSH multi-instance manager — unified control of local, SSH-tunnel and remote HTTP dsh instances, with dsh-auth-gateway login (password + TOTP) | DSH 多实例管理工具 — 本地 / SSH 隧道 / 远程 HTTP 三种 dsh 实例统一管理，对接 ds</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/xbzbing/dsh-hub-desktop" rel="nofollow ugc">xbzbing/dsh-hub-desktop source on GitHub</a>
      · <a href="../registry.html#xbzbing__dsh-hub-desktop">this plugin in the registry</a></p>
   <p>xbzbing/dsh-hub-desktop is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, decodes base64 payloads, starts a network server, reads credential-class env vars.</p>
   <p class="lede"><b>No dsh integration found — this repository carries the dsh-plugin topic but shows no sign of connecting to dsh</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×40 in authored code, e.g. electron.vite.config.ts:1, electron.vite.config.ts:1</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×2 in authored code, e.g. src/main/create-vault.ts:46, src/main/ssh/host-trust.ts:47</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×7 in authored code, e.g. scripts/gateway-fixture.mjs:40, scripts/gateway-fixture.mjs:45</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_AUTH_GATEWAY_MASTER_KEY, DSH_AUTH_GATEWAY_SRC, DSH_HUB_ASKPASS_SOCKET, DSH_HUB_E2E_PASSWORD_STORE</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×40 in authored code, e.g. electron.vite.config.ts:1, electron.vite.config.ts:1</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×2 in authored code, e.g. src/main/create-vault.ts:46, src/main/ssh/host-trust.ts:47</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×7 in authored code, e.g. scripts/gateway-fixture.mjs:40, scripts/gateway-fixture.mjs:45</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_AUTH_GATEWAY_MASTER_KEY, DSH_AUTH_GATEWAY_SRC, DSH_HUB_ASKPASS_SOCKET, DSH_HUB_E2E_PASSWORD_STORE, GITHUB_TOKEN</td></tr></tbody></table>
   
   
-  <h2>Outbound domains</h2><p class="kv"><span>registry.npmmirror.com</span> <span>www.npmjs.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_HUB_E2E_PASSWORD_STORE</span> <span>DSH_AUTH_GATEWAY_MASTER_KEY</span> <span>DSH_RUNTIME_ENTRY</span> <span>DSH_AUTH_GATEWAY_SRC</span> <span>KEEP_DATA</span> <span>DBUS_SESSION_BUS_ADDRESS</span> <span>DSH_HUB_E2E_HIDDEN</span> <span>DSH_HUB_ASKPASS_SOCKET</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>registry.npmmirror.com</span> <span>www.npmjs.com</span> <span>api.npmjs.org</span> <span>api.github.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_HUB_E2E_PASSWORD_STORE</span> <span>DSH_AUTH_GATEWAY_MASTER_KEY</span> <span>DSH_RUNTIME_ENTRY</span> <span>DSH_AUTH_GATEWAY_SRC</span> <span>KEEP_DATA</span> <span>DBUS_SESSION_BUS_ADDRESS</span> <span>DSH_HUB_E2E_HIDDEN</span> <span>GITHUB_TOKEN</span> <span>DSH_HUB_ASKPASS_SOCKET</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
