@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>chen731215-dev/dsh-muv-engine — capability card (C3) · dsh-xray</title>
-<meta name="description" content="chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.">
+<meta name="description" content="chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/chen731215-dev__dsh-muv-engine.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="chen731215-dev/dsh-muv-engine — dsh plugin capability card">
-<meta property="og:description" content="chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.">
+<meta property="og:description" content="chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/chen731215-dev__dsh-muv-engine.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-muv-engine", "identifier": "chen731215-dev/dsh-muv-engine", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.", "codeRepository": "https://github.com/chen731215-dev/dsh-muv-engine", "url": "https://unstone.github.io/dsh-xray/p/chen731215-dev__dsh-muv-engine.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-muv-engine", "identifier": "chen731215-dev/dsh-muv-engine", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship.", "codeRepository": "https://github.com/chen731215-dev/dsh-muv-engine", "url": "https://unstone.github.io/dsh-xray/p/chen731215-dev__dsh-muv-engine.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/chen731215-dev/dsh-muv-engine" rel="nofollow ugc">chen731215-dev/dsh-muv-engine source on GitHub</a>
      · <a href="../registry.html#chen731215-dev__dsh-muv-engine">this plugin in the registry</a></p>
-  <p>chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.</p>
+  <p>chen731215-dev/dsh-muv-engine is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×89 in authored code, e.g. diag.mjs:19, diag.mjs:19</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×57 in authored code, e.g. repro-media-script-corruption.mjs:50, repro-native-media-path.mjs:94</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×6 in authored code, e.g. diag.mjs:19, diag.mjs:19</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×35 in development tooling the package does not ship, e.g. tools/repro/repro-media-script-corruption.mjs:50, tools/repro/repro-native-media-path.mjs:94</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>webServer</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>zyxjack123.top</span> <span>cdn.jsdelivr.net</span> <span>testingcf.jsdelivr.net</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>MUV_EDGE</span> <span>MUV_CLIENT_SRC</span> <span>MUV_CARD_DIR</span> <span>MUV_CARD</span> <span>MUV_REAL_REPLY</span> <span>MUV_DEBUG</span> <span>DSH_HOME</span> <span>DSH_SILLYTAVERN_DIR</span> <span>MUV_ENGINE_DATA_DIR</span> <span>MUV_CARD_FILE</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>cdn.jsdelivr.net</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_SILLYTAVERN_DIR</span> <span>DSH_PORT</span> <span>DSH_MUV_CARD_DIRS</span> <span>MUV_ENGINE_DATA_DIR</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>toddpan/dsh-feyagate — capability card (C3) · dsh-xray</title>
-<meta name="description" content="toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, starts a network server.">
+<meta name="description" content="toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship, starts a network server.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/toddpan__dsh-feyagate.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="toddpan/dsh-feyagate — dsh plugin capability card">
-<meta property="og:description" content="toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, starts a network server.">
+<meta property="og:description" content="toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship, starts a network server.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/toddpan__dsh-feyagate.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-feyagate", "identifier": "toddpan/dsh-feyagate", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, starts a network server.", "codeRepository": "https://github.com/toddpan/dsh-feyagate", "url": "https://unstone.github.io/dsh-xray/p/toddpan__dsh-feyagate.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-feyagate", "identifier": "toddpan/dsh-feyagate", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship, starts a network server.", "codeRepository": "https://github.com/toddpan/dsh-feyagate", "url": "https://unstone.github.io/dsh-xray/p/toddpan__dsh-feyagate.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 0 ·
      <a href="https://github.com/toddpan/dsh-feyagate" rel="nofollow ugc">toddpan/dsh-feyagate source on GitHub</a>
      · <a href="../registry.html#toddpan__dsh-feyagate">this plugin in the registry</a></p>
-  <p>toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, starts a network server.</p>
+  <p>toddpan/dsh-feyagate is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval in development tooling the package does not ship, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×17 in authored code, e.g. scripts/check-supervise-ownership.mjs:22, scripts/check-supervise-ownership.mjs:72</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×2 in authored code, e.g. scripts/check-patch.mjs:84, scripts/check-patch.mjs:84</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×25 in authored code, e.g. scripts/check-platform-auth.mjs:137, scripts/check-platform-auth.mjs:163</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>GITHUB_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×4 in authored code, e.g. src/download/extract.ts:21, src/download/mach-deps.ts:15</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. scripts/check-patch.mjs:84, scripts/check-patch.mjs:84</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×2 in authored code, e.g. src/mcp/facade.ts:596, src/supervise/health.ts:36</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: GITHUB_TOKEN</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span> <span>webServer</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>account.xiaomi.com</span> <span>api.github.com</span> <span>oneapi.sooncore.com</span> <span>api.openai.com</span> <span>www.feyagate.com</span> <span>mirror.example.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_FEYAGATE_HOME</span> <span>DSH_HOME</span> <span>GITHUB_TOKEN</span> <span>DSH_MCP_SDK</span> <span>FAKE_SERVER_VERSION</span> <span>DSH_VERSIONS_DIR</span> <span>DSH_PROFILE</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>mirror.example.com</span> <span>api.openai.com</span> <span>www.feyagate.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_FEYAGATE_HOME</span> <span>DSH_PROFILE</span> <span>DSH_HOME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

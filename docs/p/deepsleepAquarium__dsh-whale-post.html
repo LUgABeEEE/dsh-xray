@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#deepsleepAquarium__dsh-whale-post">this plugin in the registry</a></p>
   <p>deepsleepAquarium/dsh-whale-post is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×38 in authored code, e.g. scripts/check-imports.mjs:39, scripts/check-imports.mjs:39</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×40 in authored code, e.g. scripts/check-imports.mjs:39, scripts/check-imports.mjs:39</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>TEMP</span> <span>WHALE_POST_ROOT</span> <span>WHALE_POST_REMOTE_ROOT</span> <span>COMPAT_OLD</span> <span>DSH_HOME</span> <span>RACE_N</span> <span>WHALE_POST_REMOTE_ONLY_FLAG</span> <span>USERNAME</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>TEMP</span> <span>WHALE_POST_ROOT</span> <span>WHALE_POST_REMOTE_ROOT</span> <span>DSH_HOME</span> <span>COMPAT_OLD</span> <span>RACE_N</span> <span>WHALE_POST_REMOTE_ONLY_FLAG</span> <span>USERNAME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

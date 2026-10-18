@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>yanzhaohui1999/dsh-perf-hud — capability card (C3) · dsh-xray</title>
-<meta name="description" content="yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
+<meta name="description" content="yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/yanzhaohui1999__dsh-perf-hud.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yanzhaohui1999/dsh-perf-hud — dsh plugin capability card">
-<meta property="og:description" content="yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
+<meta property="og:description" content="yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/yanzhaohui1999__dsh-perf-hud.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-perf-hud", "identifier": "yanzhaohui1999/dsh-perf-hud", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.", "codeRepository": "https://github.com/yanzhaohui1999/dsh-perf-hud", "url": "https://unstone.github.io/dsh-xray/p/yanzhaohui1999__dsh-perf-hud.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-perf-hud", "identifier": "yanzhaohui1999/dsh-perf-hud", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.", "codeRepository": "https://github.com/yanzhaohui1999/dsh-perf-hud", "url": "https://unstone.github.io/dsh-xray/p/yanzhaohui1999__dsh-perf-hud.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,9 +49,9 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 0 ·
      <a href="https://github.com/yanzhaohui1999/dsh-perf-hud" rel="nofollow ugc">yanzhaohui1999/dsh-perf-hud source on GitHub</a>
      · <a href="../registry.html#yanzhaohui1999__dsh-perf-hud">this plugin in the registry</a></p>
-  <p>yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.</p>
+  <p>yanzhaohui1999/dsh-perf-hud is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. tools/cdp.mjs:15, tools/cdp.mjs:44</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×8 in authored code, e.g. tools/check-counts.mjs:178, tools/check-counts.mjs:179</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. tools/cdp.mjs:15, tools/cdp.mjs:44</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. tools/check-counts.mjs:37</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×8 in authored code, e.g. tools/check-counts.mjs:220, tools/check-counts.mjs:221</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>session/event</span></p>
   
