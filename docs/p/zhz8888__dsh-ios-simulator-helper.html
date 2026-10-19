@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>zhz8888/dsh-ios-simulator-helper — capability card (C2) · dsh-xray</title>
-<meta name="description" content="zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, base64 decoding in build output only.">
+<meta name="description" content="zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, base64 decoding in build output only.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/zhz8888__dsh-ios-simulator-helper.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zhz8888/dsh-ios-simulator-helper — dsh plugin capability card">
-<meta property="og:description" content="zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, base64 decoding in build output only.">
+<meta property="og:description" content="zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, base64 decoding in build output only.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/zhz8888__dsh-ios-simulator-helper.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-ios-simulator-helper", "identifier": "zhz8888/dsh-ios-simulator-helper", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, base64 decoding in build output only.", "codeRepository": "https://github.com/zhz8888/dsh-ios-simulator-helper", "url": "https://unstone.github.io/dsh-xray/p/zhz8888__dsh-ios-simulator-helper.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-ios-simulator-helper", "identifier": "zhz8888/dsh-ios-simulator-helper", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, base64 decoding in build output only.", "codeRepository": "https://github.com/zhz8888/dsh-ios-simulator-helper", "url": "https://unstone.github.io/dsh-xray/p/zhz8888__dsh-ios-simulator-helper.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,12 +46,12 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C2</span>
   </div>
   <p class="lede">在 DeepSeek Harness 里驱动 iOS 模拟器：21 个原生 ios_* 工具覆盖工程发现、构建、安装、启动、截图与日志，并提供设置页 | Drives the iOS Simulator from DeepSeek Harness: 21 native ios_* tools for Xcode project discovery, build, install, launch, </p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/zhz8888/dsh-ios-simulator-helper" rel="nofollow ugc">zhz8888/dsh-ios-simulator-helper source on GitHub</a>
      · <a href="../registry.html#zhz8888__dsh-ios-simulator-helper">this plugin in the registry</a></p>
-  <p>zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, base64 decoding in build output only.</p>
+  <p>zhz8888/dsh-ios-simulator-helper is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, base64 decoding in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×3 in build output only, e.g. lib/util/run.js:1, lib/util/run.js:27</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/tools/index.js:390</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×3 in build output only, e.g. lib/util/run.js:1, lib/util/run.js:27</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×4 in development tooling the package does not ship, e.g. scripts/verify-mount.mjs:44, scripts/verify-mount.mjs:47</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/tools/index.js:392</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>configForms</span> <span>locale</span> <span>slots</span> <span>tools</span></p>
   
   

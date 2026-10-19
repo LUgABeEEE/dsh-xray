@@ -51,10 +51,10 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#Mochabafey__whale-notify">this plugin in the registry</a></p>
   <p>Mochabafey/whale-notify is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, base64 decoding in build output only, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×4 in authored code, e.g. verify-notify.mjs:77, verify-notify.mjs:77</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. plugins/dsh-whale-notify/lib/imap.js:53</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. verify-notify.mjs:70, verify-notify.mjs:161</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×4 in authored code, e.g. verify-notify.mjs:77, verify-notify.mjs:77</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. plugins/dsh-whale-notify/lib/imap.js:46</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. verify-notify.mjs:70, verify-notify.mjs:161</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>timer</span> <span>tools</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>open.feishu.cn</span> <span>sctapi.ftqq.com</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>sctapi.ftqq.com</span> <span>open.feishu.cn</span></p>
   <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>USERPROFILE</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin

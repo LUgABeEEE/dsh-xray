@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#semantic-craft__dsh-grokbot-dispatch">this plugin in the registry</a></p>
   <p>semantic-craft/dsh-grokbot-dispatch is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×6 in authored code, e.g. plugin/config.js:14, plugin/config.js:14</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×3 in authored code, e.g. plugin/index.js:126, plugin/index.js:133</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×5 in authored code, e.g. plugin/config.js:13, plugin/config.js:13</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. plugin/index.js:127, plugin/index.js:135</td></tr></tbody></table>
   
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/turn-stopping</span> <span>session/event</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>TAILSCALE_BIN</span> <span>DSH_DISPATCH_CONFIG</span> <span>DSH_DISPATCH_DISCOVERY</span> <span>DISPATCH_RUNNER</span> <span>DISPATCH_STANDBY</span> <span>TAILMSG_HOME</span> <span>TAILMSG_SCRIPT</span> <span>TAILMSG_PYTHON</span> <span>DISPATCH_STATE_DIR</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>TAILSCALE_BIN</span> <span>DSH_DISPATCH_CONFIG</span> <span>DSH_DISPATCH_DISCOVERY</span> <span>DISPATCH_RUNNER</span> <span>DISPATCH_STANDBY</span> <span>DSH_NATIVE_SOCKET</span> <span>DSH_NATIVE_BRIDGE</span> <span>DISPATCH_STATE_DIR</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
