@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C2</span>
   </div>
   <p class="lede">目录插件：让 DeepSeek Harness 桌面端「新建工作区」的文件夹选择框从你设定的默认目录开始（Windows）｜Start the DSH new-workspace folder picker in your own directory.</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/milu7/dsh-directory-plugin" rel="nofollow ugc">milu7/dsh-directory-plugin source on GitHub</a>
      · <a href="../registry.html#milu7__dsh-directory-plugin">this plugin in the registry</a></p>
   <p>milu7/dsh-directory-plugin is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×2 in build output only, e.g. lib/core.js:7, lib/core.js:194</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×3 in build output only, e.g. lib/core.js:7, lib/core.js:425</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span></p>
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_KOFFI_PATH</span> <span>DSH_HOME</span> <span>DSH_DIALOG_TITLE</span> <span>DSH_DIALOG_INITIAL_DIR</span> <span>DSH_DIALOG_LOG</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_KOFFI_PATH</span> <span>DSH_HOME</span> <span>DSH_DIALOG_REENABLE_OWNER</span> <span>DSH_DIALOG_TITLE</span> <span>DSH_DIALOG_INITIAL_DIR</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

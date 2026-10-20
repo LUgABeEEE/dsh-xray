@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#LEEKINBUN-dsh-tools__dsh-backroom">this plugin in the registry</a></p>
   <p>LEEKINBUN-dsh-tools/dsh-backroom is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, reads credential-class env vars.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_BACKROOM_SESSION_KEY</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_BACKROOM_KEY_FILE, DSH_BACKROOM_TOKEN_BUDGET</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>webServer</span></p>
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_BACKROOM_CRASH_LOGS</span> <span>APPDATA</span> <span>DSH_BACKROOM_SOURCE_ROOT</span> <span>DSH_BACKROOM_SESSION_KEY</span> <span>DSH_BACKROOM_SESSION_ALLOW</span> <span>DSH_BACKROOM_WORKSPACE_ROOTS</span> <span>DSH_BACKROOM_WSL_DISTROS</span> <span>DSH_BACKROOM_BRIDGE_BASE</span> <span>DSH_PORT</span> <span>TEMP</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_BACKROOM_DENY_PRESETS</span> <span>DSH_BACKROOM_WORKSPACE_ROOTS</span> <span>DSH_BACKROOM_ALLOW_PRESETS</span> <span>DSH_BACKROOM_TOKEN_BUDGET</span> <span>DSH_BACKROOM_BRIDGE_BASE</span> <span>DSH_BACKROOM_KEY_FILE</span> <span>DSH_BACKROOM_CRASH_LOGS</span> <span>APPDATA</span> <span>DSH_BACKROOM_SOURCE_ROOT</span> <span>DSH_BACKROOM_WSL_DISTROS</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

@@ -45,13 +45,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>Nwflower/dsh-claude-style</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">Claude Code Desktop theme for DeepSeek Harness｜ 为 DeepSeek Harness 网页 GUI 打造的 Claude Code 桌面主题</p>
+  <p class="lede">Claude Code Desktop theme for DeepSeek Harness｜ 为 DeepSeek Harness 复刻 Claude Code Desktop 风格与交互体验的主题插件</p>
   <p class="lede">★ 100+ ·
      <a href="https://github.com/Nwflower/dsh-claude-style" rel="nofollow ugc">Nwflower/dsh-claude-style source on GitHub</a>
      · <a href="../registry.html#Nwflower__dsh-claude-style">this plugin in the registry</a></p>
   <p>Nwflower/dsh-claude-style is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×34 in authored code, e.g. scripts/build-checks.mjs:8, scripts/build-checks.mjs:8</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×3 in authored code, e.g. packages/testing/lane.cjs:108, packages/testing/lane.cjs:152</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×2 in authored code, e.g. packages/testing/smoke.cjs:281, packages/testing/smoke/stand-in/host-fetch.js:15</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. packages/testing/mock-llm.cjs:388, packages/testing/mock-platform.cjs:62</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_WEB_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×41 in authored code, e.g. scripts/build-checks.mjs:8, scripts/build-checks.mjs:8</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×3 in authored code, e.g. packages/testing/lane.cjs:108, packages/testing/lane.cjs:152</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×2 in authored code, e.g. packages/testing/smoke/server.cjs:75, packages/testing/smoke/stand-in/host-fetch.js:15</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. packages/testing/mock-llm.cjs:414, packages/testing/mock-platform.cjs:62</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_WEB_TOKEN</td></tr></tbody></table>
   
   
   <h2>Outbound domains</h2><p class="kv"><span>offpeakclock.com</span></p>

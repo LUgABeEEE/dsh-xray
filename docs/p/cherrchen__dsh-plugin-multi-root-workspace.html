@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>cherrchen/dsh-plugin-multi-root-workspace — capability card (C3) · dsh-xray</title>
-<meta name="description" content="cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server, reads credential-class env vars.">
+<meta name="description" content="cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands, starts a network server.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/cherrchen__dsh-plugin-multi-root-workspace.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cherrchen/dsh-plugin-multi-root-workspace — dsh plugin capability card">
-<meta property="og:description" content="cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server, reads credential-class env vars.">
+<meta property="og:description" content="cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands, starts a network server.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/cherrchen__dsh-plugin-multi-root-workspace.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-plugin-multi-root-workspace", "identifier": "cherrchen/dsh-plugin-multi-root-workspace", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server, reads credential-class env vars.", "codeRepository": "https://github.com/cherrchen/dsh-plugin-multi-root-workspace", "url": "https://unstone.github.io/dsh-xray/p/cherrchen__dsh-plugin-multi-root-workspace.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-plugin-multi-root-workspace", "identifier": "cherrchen/dsh-plugin-multi-root-workspace", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands, starts a network server.", "codeRepository": "https://github.com/cherrchen/dsh-plugin-multi-root-workspace", "url": "https://unstone.github.io/dsh-xray/p/cherrchen__dsh-plugin-multi-root-workspace.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">多文件夹 workspace：让 DSH（DeepSeek Harness）的 Agent 不只能读写主目录，还能同时读写你添加的其他文件夹。Multi-folder workspace for DeepSeek Harness: let the agent read and write several folders at once, not just the primary one.</p>
-  <p class="lede">★ 5+ ·
+  <p class="lede">★ 10+ ·
      <a href="https://github.com/cherrchen/dsh-plugin-multi-root-workspace" rel="nofollow ugc">cherrchen/dsh-plugin-multi-root-workspace source on GitHub</a>
      · <a href="../registry.html#cherrchen__dsh-plugin-multi-root-workspace">this plugin in the registry</a></p>
-  <p>cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server, reads credential-class env vars.</p>
+  <p>cherrchen/dsh-plugin-multi-root-workspace is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×28 in authored code, e.g. scripts/bump-version.mjs:4, scripts/bump-version.mjs:4</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×2 in authored code, e.g. scripts/smoke-journey.mjs:295, scripts/smoke-journey.mjs:330</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DEEPSEEK_API_KEY</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>commands</span> <span>connection</span> <span>fs</span> <span>locale</span> <span>multiRootCompat</span> <span>multiRootProviders</span> <span>multiRootRegistry</span> <span>multiRootScope</span> <span>sandbox</span> <span>sandboxPolicy</span> <span>slots</span> <span>storageDomain</span></p>
-  <h2>Hooks it attaches</h2><p class="kv"><span>session/event</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×36 in authored code, e.g. scripts/build-auto-review.mjs:1, scripts/build-auto-review.mjs:1</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×2 in authored code, e.g. scripts/smoke-journey.mjs:295, scripts/smoke-journey.mjs:330</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DEEPSEEK_API_KEY</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>approval</span> <span>commands</span> <span>connection</span> <span>fs</span> <span>llm</span> <span>locale</span> <span>multiRootCompat</span> <span>multiRootInstructions</span> <span>multiRootProviders</span> <span>multiRootRegistry</span> <span>multiRootReviewContext</span> <span>multiRootScope</span> <span>permissionPresets</span> <span>sandbox</span> <span>sandboxPolicy</span> <span>sessions</span> <span>slots</span> <span>storageDomain</span> <span>tools</span> <span>workingDirectory</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>session/event</span> <span>tools/execute</span> <span>tools/pre-execute</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_PERMISSION_MODE</span> <span>DSH_SMOKE_KEEP</span> <span>GITHUB_ENV</span> <span>DSH_SUBPROCESS_CONTROL</span> <span>DSH_SMOKE_HOME</span> <span>DSH_HOME</span> <span>DSH_MULTI_ROOT_COMPAT</span> <span>npm_execpath</span> <span>DSH_SMOKE_PLUGIN_SOURCE</span> <span>DSH_SMOKE_DEFER_HOME_CLEANUP</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_PERMISSION_MODE</span> <span>DSH_SMOKE_KEEP</span> <span>GITHUB_ENV</span> <span>DSH_SMOKE_DEFER_HOME_CLEANUP</span> <span>DSH_SUBPROCESS_CONTROL</span> <span>DSH_SMOKE_HOME</span> <span>DSH_HOME</span> <span>DSH_MULTI_ROOT_COMPAT</span> <span>npm_execpath</span> <span>DSH_AUTO_REVIEW_PACKED</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
