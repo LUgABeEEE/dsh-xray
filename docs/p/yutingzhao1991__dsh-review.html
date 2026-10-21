@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>yutingzhao1991/dsh-review — capability card (C3) · dsh-xray</title>
-<meta name="description" content="yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, command execution in build output only, uses eval / new Function.">
+<meta name="description" content="yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, uses eval / new Function.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/yutingzhao1991__dsh-review.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yutingzhao1991/dsh-review — dsh plugin capability card">
-<meta property="og:description" content="yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, command execution in build output only, uses eval / new Function.">
+<meta property="og:description" content="yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, uses eval / new Function.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/yutingzhao1991__dsh-review.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-review", "identifier": "yutingzhao1991/dsh-review", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, command execution in build output only, uses eval / new Function.", "codeRepository": "https://github.com/yutingzhao1991/dsh-review", "url": "https://unstone.github.io/dsh-xray/p/yutingzhao1991__dsh-review.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-review", "identifier": "yutingzhao1991/dsh-review", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, uses eval / new Function.", "codeRepository": "https://github.com/yutingzhao1991/dsh-review", "url": "https://unstone.github.io/dsh-xray/p/yutingzhao1991__dsh-review.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,11 +49,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/yutingzhao1991/dsh-review" rel="nofollow ugc">yutingzhao1991/dsh-review source on GitHub</a>
      · <a href="../registry.html#yutingzhao1991__dsh-review">this plugin in the registry</a></p>
-  <p>yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, command execution in build output only, uses eval / new Function.</p>
+  <p>yutingzhao1991/dsh-review is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, uses eval / new Function.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can spawn subprocesses</td><td><code>subprocess_service</code></td><td>inject: subprocess</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×3 in build output only, e.g. lib/changes.js:34, lib/reviewers.js:199</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. selftest.mjs:1523</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can spawn subprocesses</td><td><code>subprocess_service</code></td><td>inject: subprocess</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. selftest.mjs:17, selftest.mjs:17</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. selftest.mjs:1608</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>configForms</span> <span>jobs</span> <span>locale</span> <span>slots</span> <span>subprocess</span> <span>tools</span></p>
-  
+  <h2>Hooks it attaches</h2><p class="kv"><span>internal/service</span></p>
   
   <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_REVIEW_TEST_PATH</span> <span>DSH_REVIEW_TEST_REVIEWER</span></p>
   <h2>How to read this</h2>

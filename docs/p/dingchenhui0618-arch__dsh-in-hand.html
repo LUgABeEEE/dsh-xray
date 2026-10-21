@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dingchenhui0618-arch/dsh-in-hand — capability card (C2) · dsh-xray</title>
-<meta name="description" content="dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, uses eval in development tooling the package does not ship, starts a network server in development tooling the package does not ship.">
+<meta name="description" content="dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/dingchenhui0618-arch__dsh-in-hand.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dingchenhui0618-arch/dsh-in-hand — dsh plugin capability card">
-<meta property="og:description" content="dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, uses eval in development tooling the package does not ship, starts a network server in development tooling the package does not ship.">
+<meta property="og:description" content="dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/dingchenhui0618-arch__dsh-in-hand.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-in-hand", "identifier": "dingchenhui0618-arch/dsh-in-hand", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, uses eval in development tooling the package does not ship, starts a network server in development tooling the package does not ship.", "codeRepository": "https://github.com/dingchenhui0618-arch/dsh-in-hand", "url": "https://unstone.github.io/dsh-xray/p/dingchenhui0618-arch__dsh-in-hand.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-in-hand", "identifier": "dingchenhui0618-arch/dsh-in-hand", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship.", "codeRepository": "https://github.com/dingchenhui0618-arch/dsh-in-hand", "url": "https://unstone.github.io/dsh-xray/p/dingchenhui0618-arch__dsh-in-hand.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/dingchenhui0618-arch/dsh-in-hand" rel="nofollow ugc">dingchenhui0618-arch/dsh-in-hand source on GitHub</a>
      · <a href="../registry.html#dingchenhui0618-arch__dsh-in-hand">this plugin in the registry</a></p>
-  <p>dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, uses eval in development tooling the package does not ship, starts a network server in development tooling the package does not ship.</p>
+  <p>dingchenhui0618-arch/dsh-in-hand is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×1 in development tooling the package does not ship, e.g. scripts/check-bundle.mjs:36</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. scripts/check-uploads.mjs:82, scripts/check-uploads.mjs:87</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×3 in build output only, e.g. lib/ticket.js:22, lib/ticket.js:22</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×5 in development tooling the package does not ship, e.g. scripts/check-no-autonav.mjs:27, scripts/check-no-autonav.mjs:150</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×9 in development tooling the package does not ship, e.g. scripts/check-bundle.mjs:36, scripts/check-no-autonav.mjs:76</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×15 in development tooling the package does not ship, e.g. scripts/check-contract.mjs:65, scripts/check-contract.mjs:73</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: TASKWATCH_TICKET_SECRET</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span> <span>webServer</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/status</span> <span>api-session/status</span> <span>approval/request</span> <span>user-questions/request</span> <span>workflow/end</span> <span>workflow/log</span> <span>workflow/phase</span> <span>workflow/start</span></p>
-  
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_TASKWATCH_ROOTS</span> <span>DSH_TASKWATCH_WORKSPACES</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>dsh.example.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_TASKWATCH_ROOTS</span> <span>DSH_TASKWATCH_WORKSPACES</span> <span>DSH_TASKWATCH_PUBLIC_URL</span> <span>DSH_TASKWATCH_LAN_URL</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

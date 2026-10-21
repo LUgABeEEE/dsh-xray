@@ -46,12 +46,12 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">DSH 桌面端（DeepSeek Harness）插件：编辑会话里的助手回复与思维链，让模型采信改后的内容—在线写入立即生效。Plugin: Edit the assistant&#x27;s responses and thought chains within sessions, enabling the model to adopt the modified content — online writ</p>
-  <p class="lede">★ 1+ ·
+  <p class="lede">★ 5+ ·
      <a href="https://github.com/kinggod899/dsh-reply-forge-v3" rel="nofollow ugc">kinggod899/dsh-reply-forge-v3 source on GitHub</a>
      · <a href="../registry.html#kinggod899__dsh-reply-forge-v3">this plugin in the registry</a></p>
   <p>kinggod899/dsh-reply-forge-v3 is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×17 in authored code, e.g. scripts/build-release.mjs:18, scripts/build-release.mjs:18</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. scripts/build-client.mjs:205</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×22 in authored code, e.g. scripts/build-client-esbuild.mjs:21, scripts/build-client-esbuild.mjs:21</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×3 in authored code, e.g. scripts/build-client-esbuild.mjs:73, scripts/build-client-esbuild.mjs:76</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>sessions</span> <span>slots</span> <span>webServer</span></p>
   
   

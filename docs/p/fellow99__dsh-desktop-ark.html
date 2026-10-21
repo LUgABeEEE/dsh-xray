@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>fellow99/dsh-desktop-ark — capability card (C3) · dsh-xray</title>
-<meta name="description" content="fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, base64 decoding in build output only.">
+<meta name="description" content="fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can spawn subprocesses, executes system commands, base64 decoding in build output only, starts a network server.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/fellow99__dsh-desktop-ark.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fellow99/dsh-desktop-ark — dsh plugin capability card">
-<meta property="og:description" content="fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, base64 decoding in build output only.">
+<meta property="og:description" content="fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can spawn subprocesses, executes system commands, base64 decoding in build output only, starts a network server.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/fellow99__dsh-desktop-ark.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-desktop-ark", "identifier": "fellow99/dsh-desktop-ark", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, base64 decoding in build output only.", "codeRepository": "https://github.com/fellow99/dsh-desktop-ark", "url": "https://unstone.github.io/dsh-xray/p/fellow99__dsh-desktop-ark.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-desktop-ark", "identifier": "fellow99/dsh-desktop-ark", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can spawn subprocesses, executes system commands, base64 decoding in build output only, starts a network server.", "codeRepository": "https://github.com/fellow99/dsh-desktop-ark", "url": "https://unstone.github.io/dsh-xray/p/fellow99__dsh-desktop-ark.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">The official DeepSeek Harness (DSH) Web UI, unmodified, running on HarmonyOS 2in1 / tablet inside the system ArkWeb — with the dsh Host on a real Node.js runtime embedded in the same process. No Elect</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/fellow99/dsh-desktop-ark" rel="nofollow ugc">fellow99/dsh-desktop-ark source on GitHub</a>
      · <a href="../registry.html#fellow99__dsh-desktop-ark">this plugin in the registry</a></p>
-  <p>fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can spawn subprocesses, executes system commands, base64 decoding in build output only.</p>
+  <p>fellow99/dsh-desktop-ark is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It can spawn subprocesses, executes system commands, base64 decoding in build output only, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>[&#x27;./cordis.patch.yml&#x27;]</td></tr><tr><td>can spawn subprocesses</td><td><code>subprocess_service</code></td><td>inject: subprocess</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×6 in authored code, e.g. scripts/assemble-payload.mjs:21, scripts/assemble-payload.mjs:21</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. packages/attachment-image-ohos/lib/index.js:229</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>connection</span> <span>subprocess</span> <span>webServer</span></p>
-  <h2>Hooks it attaches</h2><p class="kv"><span>agent/status</span> <span>approval/request</span></p>
-  
-  <h2>Environment variables it reads</h2><p class="kv"><span>NODE_BRIDGE_PAYLOAD_ROOT</span> <span>NODE_BRIDGE_READONLY_ROOT</span> <span>DSH_HOME</span> <span>SIGN_MODE</span> <span>NODE_BRIDGE_ARCHIVE</span> <span>DSH_OHOS_APP_LOG</span> <span>DSH_OHOS_WORKSPACE</span> <span>NODE_OPTIONS</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>can spawn subprocesses</td><td><code>subprocess_service</code></td><td>inject: subprocess</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×10 in authored code, e.g. scripts/assemble-payload.mjs:21, scripts/assemble-payload.mjs:21</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. packages/attachment-image-ohos/lib/index.js:266</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. payload/jitless/selfcheck.js:37, payload/jitless/selfcheck.js:40</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>connection</span> <span>fs</span> <span>locale</span> <span>remote</span> <span>slots</span> <span>subprocess</span> <span>tools</span> <span>uiWorkspace</span> <span>webServer</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>agent/status</span> <span>approval/request</span> <span>webserver/index-inject</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>git.example.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>NODE_BRIDGE_PAYLOAD_ROOT</span> <span>NODE_BRIDGE_READONLY_ROOT</span> <span>DSH_OHOS_APP_LOG</span> <span>DSH_HOME</span> <span>DSH_OHOS_PICKER_TRACE</span> <span>SIGN_MODE</span> <span>NODE_BRIDGE_ARCHIVE</span> <span>DSH_OHOS_WORKSPACE</span> <span>NODE_OPTIONS</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

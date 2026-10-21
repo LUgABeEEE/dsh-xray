@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">DeepSeek Harness 手写墨迹开屏插件：按真实笔顺写出你的文字，收在鲸鱼锁标上；字体、文字与深浅色都在设置里配置。</p>
-  <p class="lede">★ 1+ ·
+  <p class="lede">★ 5+ ·
      <a href="https://github.com/w-j-y-wjy/dsh-ink-whale" rel="nofollow ugc">w-j-y-wjy/dsh-ink-whale source on GitHub</a>
      · <a href="../registry.html#w-j-y-wjy__dsh-ink-whale">this plugin in the registry</a></p>
   <p>w-j-y-wjy/dsh-ink-whale is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×5 in authored code, e.g. scripts/verify.mjs:5, scripts/verify.mjs:5</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×38 in authored code, e.g. _test/boot-cover-check.mjs:91, _test/boot-cover-check.mjs:95</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. src/tools/cdp.mjs:58</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×5 in authored code, e.g. scripts/verify.mjs:5, scripts/verify.mjs:5</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×52 in authored code, e.g. _test/boot-cover-check.mjs:91, _test/boot-cover-check.mjs:95</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. src/tools/cdp.mjs:58</td></tr></tbody></table>
   
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>CAPTION</span> <span>DSHIW_GPU</span> <span>TEXT</span> <span>THEME</span> <span>FONT</span> <span>TAG</span> <span>INLINE</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>TEXT</span> <span>CAPTION</span> <span>DSHIW_GPU</span> <span>THEME</span> <span>FONT</span> <span>TAG</span> <span>INLINE</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
