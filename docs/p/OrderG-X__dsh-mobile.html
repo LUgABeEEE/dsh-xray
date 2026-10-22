@@ -45,13 +45,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>OrderG-X/dsh-mobile</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">Use DeepSeek Harness (DSH) from your phone: scan a QR code, watch and steer the tasks on your computer, on Wi-Fi or anywhere via a free Cloudflare tunnel. · DSH 手机端：扫码在手机浏览器里看电脑上的任务。</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">Use DeepSeek Harness (DSH) from your phone: scan a QR code, watch and steer the tasks on your computer from anywhere via a free Cloudflare tunnel. · DSH 手机端：扫码在手机浏览器里看电脑上的任务。</p>
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/OrderG-X/dsh-mobile" rel="nofollow ugc">OrderG-X/dsh-mobile source on GitHub</a>
      · <a href="../registry.html#OrderG-X__dsh-mobile">this plugin in the registry</a></p>
   <p>OrderG-X/dsh-mobile is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, network server in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×4 in build output only, e.g. lib/tunnel.js:14, lib/tunnel.js:14</td></tr><tr><td>network server in build output only</td><td><code>net_server_bundled</code></td><td>×3 in build output only, e.g. lib/gateway.js:468, lib/tunnel.js:119</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×4 in build output only, e.g. lib/tunnel.js:14, lib/tunnel.js:14</td></tr><tr><td>network server in build output only</td><td><code>net_server_bundled</code></td><td>×3 in build output only, e.g. lib/gateway.js:521, lib/tunnel.js:138</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span> <span>webServer</span></p>
   
   

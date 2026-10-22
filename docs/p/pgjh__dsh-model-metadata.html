@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>pgjh/dsh-model-metadata</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DSH plugin: match custom-gateway models to the model metadata they should have (context window, output cap, reasoning levels, vision) by bare model name — nothing written to your settings</p>
+  <p class="lede">DSH plugin: fill in custom-gateway model metadata by bare model name — context window, output cap, reasoning levels and vision — on Web and Desktop. Nothing is written until you press Write.</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/pgjh/dsh-model-metadata" rel="nofollow ugc">pgjh/dsh-model-metadata source on GitHub</a>
      · <a href="../registry.html#pgjh__dsh-model-metadata">this plugin in the registry</a></p>
@@ -53,7 +53,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×10 in authored code, e.g. dev-paths.mjs:14, dev-paths.mjs:14</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>remote</span> <span>slots</span></p>
-  
+  <h2>Hooks it attaches</h2><p class="kv"><span>app-boot/config-reload</span></p>
   <h2>Outbound domains</h2><p class="kv"><span>models.dev</span></p>
   <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_PI_AI_CATALOG_SNAPSHOT</span> <span>DSH_PI_AI_SETTINGS_FILE</span> <span>DSH_INSTALL</span> <span>DSH_PI_AI_CATALOG_REFRESH</span> <span>DSH_CATALOG_FALLBACK_NODE_MODULES</span> <span>CHROME</span> <span>PLAYWRIGHT_CHROME</span> <span>DSH_UNIT</span> <span>DSH_CATALOG_FALLBACK_PLUGIN</span></p>
   <h2>How to read this</h2>

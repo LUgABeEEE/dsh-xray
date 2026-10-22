@@ -51,11 +51,11 @@ main h2 { font-size:16px; margin:26px 0 6px; }
      · <a href="../registry.html#changli7047__DeepSeek-Harness-Plugins">this plugin in the registry</a></p>
   <p>changli7047/DeepSeek-Harness-Plugins is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It executes system commands, starts a network server, ships no manifest.</p>
   <p class="lede"><b>Not installable — has plugin code but no manifest to install it by</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×27 in authored code, e.g. archivist/selftest.mjs:11, archivist/selftest.mjs:11</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×2 in authored code, e.g. archivist/selftest.mjs:946, archivist/selftest.mjs:963</td></tr><tr><td>ships no manifest</td><td><code>no_manifest</code></td><td>uses 1 services, 61 tool regs, no manifest</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>executes system commands</td><td><code>exec</code></td><td>×40 in authored code, e.g. archivist/selftest.mjs:12, archivist/selftest.mjs:12</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×2 in authored code, e.g. archivist/selftest.mjs:1035, archivist/selftest.mjs:1052</td></tr><tr><td>ships no manifest</td><td><code>no_manifest</code></td><td>uses 1 services, 61 tool regs, no manifest</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>tools</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/pre-step</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>ARCHIVIST_BUG_REPORT</span> <span>ARCHIVIST_POINTER</span> <span>ARCHIVIST_BUG_ENDPOINT</span> <span>ARCHIVIST_DIR</span> <span>SystemRoot</span> <span>APPDATA</span> <span>WINDOWS_TOOLS_SCREENSHOT_KEEP</span> <span>ARCHIVIST_DISTILL_NUDGE</span> <span>ARCHIVIST_DISTILL_STATE</span> <span>EVAL_MIN_TOP1</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>ARCHIVIST_BUG_REPORT</span> <span>ARCHIVIST_POINTER</span> <span>ARCHIVIST_BUG_ENDPOINT</span> <span>ARCHIVIST_DIR</span> <span>SystemRoot</span> <span>ARCHIVIST_ML_RERANK</span> <span>APPDATA</span> <span>ARCHIVIST_ML_PYTHON</span> <span>ARCHIVIST_ML_MODELS</span> <span>WINDOWS_TOOLS_SCREENSHOT_KEEP</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

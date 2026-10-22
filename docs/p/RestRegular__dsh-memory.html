@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RestRegular/dsh-memory — capability card (C3) · dsh-xray</title>
-<meta name="description" content="RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars.">
+<meta name="description" content="RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars in development tooling the package does not ship.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/RestRegular__dsh-memory.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RestRegular/dsh-memory — dsh plugin capability card">
-<meta property="og:description" content="RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars.">
+<meta property="og:description" content="RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars in development tooling the package does not ship.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/RestRegular__dsh-memory.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-memory", "identifier": "RestRegular/dsh-memory", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars.", "codeRepository": "https://github.com/RestRegular/dsh-memory", "url": "https://unstone.github.io/dsh-xray/p/RestRegular__dsh-memory.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-memory", "identifier": "RestRegular/dsh-memory", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars in development tooling the package does not ship.", "codeRepository": "https://github.com/RestRegular/dsh-memory", "url": "https://unstone.github.io/dsh-xray/p/RestRegular__dsh-memory.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>RestRegular/dsh-memory</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DSH memory plugin: local JSONL memory + embeddings + agent tools + settings panel</p>
+  <p class="lede">DSH 记忆系统 (Memory System): local-first memory — JSONL + local embeddings, five tools, auto recall, hard rules, visual panel.</p>
   <p class="lede">★ 5+ ·
      <a href="https://github.com/RestRegular/dsh-memory" rel="nofollow ugc">RestRegular/dsh-memory source on GitHub</a>
      · <a href="../registry.html#RestRegular__dsh-memory">this plugin in the registry</a></p>
-  <p>RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars.</p>
+  <p>RestRegular/dsh-memory is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, reads credential-class env vars in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×19 in authored code, e.g. tools/build-npm-packages.mjs:24, tools/build-npm-packages.mjs:24</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. source/memory-local/src/store.ts:516</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>NPM_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./packages/dsh-memory/cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. source/memory-local/src/embed-server.ts:19, source/memory-local/src/embed-server.ts:243</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. source/memory-local/src/store.ts:516</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: NPM_TOKEN</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>memory</span> <span>slots</span> <span>tools</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/pre-step</span> <span>agent/turn-stopping</span> <span>session/event</span></p>
-  <h2>Outbound domains</h2><p class="kv"><span>hf-mirror.com</span> <span>modelscope.cn</span> <span>huggingface.co</span> <span>api.github.com</span> <span>api.example.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOST_MODULES</span> <span>NPM_TOKEN</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>hf-mirror.com</span> <span>modelscope.cn</span> <span>huggingface.co</span> <span>api.github.com</span></p>
+  
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

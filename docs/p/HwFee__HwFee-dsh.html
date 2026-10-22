@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HwFee/HwFee-dsh — capability card (C3) · dsh-xray</title>
-<meta name="description" content="HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.">
+<meta name="description" content="HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/HwFee__HwFee-dsh.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HwFee/HwFee-dsh — dsh plugin capability card">
-<meta property="og:description" content="HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.">
+<meta property="og:description" content="HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/HwFee__HwFee-dsh.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HwFee-dsh", "identifier": "HwFee/HwFee-dsh", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.", "codeRepository": "https://github.com/HwFee/HwFee-dsh", "url": "https://unstone.github.io/dsh-xray/p/HwFee__HwFee-dsh.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HwFee-dsh", "identifier": "HwFee/HwFee-dsh", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.", "codeRepository": "https://github.com/HwFee/HwFee-dsh", "url": "https://unstone.github.io/dsh-xray/p/HwFee__HwFee-dsh.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">DeepSeek Harness plugins: a Claude Design System theme, system fonts, and a usage panel. Design language derived from open-claude-ui.</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/HwFee/HwFee-dsh" rel="nofollow ugc">HwFee/HwFee-dsh source on GitHub</a>
      · <a href="../registry.html#HwFee__HwFee-dsh">this plugin in the registry</a></p>
-  <p>HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function.</p>
+  <p>HwFee/HwFee-dsh is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×6 in authored code, e.g. tools/audit.mjs:60, tools/audit.mjs:60</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×4 in authored code, e.g. tools/audit.mjs:359, tools/audit.mjs:360</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×19 in authored code, e.g. market/check-release-assets.mjs:54, market/check-release-assets.mjs:54</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×4 in authored code, e.g. tools/audit.mjs:388, tools/audit.mjs:389</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. market/check-release-assets.mjs:201</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>connection</span> <span>llm</span> <span>locale</span> <span>remote</span> <span>sessions</span> <span>skills</span> <span>slots</span> <span>theme</span> <span>tools</span> <span>uiConversation</span> <span>uiSession</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>session/disposed</span> <span>session/event</span> <span>theme/change</span> <span>webserver/index-inject</span></p>
-  
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_PLUGIN_DEV_TEMPLATES</span> <span>DSH_PLUGIN_DEV_DSH</span> <span>DSH_PLUGIN_DEV_PNPM</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>reactjs.org</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>APPDATA</span> <span>DSH_HOME</span> <span>DSH_DESKTOP_USER_DATA</span> <span>CDP_PORT</span> <span>DSH_APP_EXE</span> <span>LOCALAPPDATA</span> <span>DSH_PLUGIN_DEV_TEMPLATES</span> <span>DSH_PLUGIN_DEV_DSH</span> <span>DSH_PLUGIN_DEV_PNPM</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
