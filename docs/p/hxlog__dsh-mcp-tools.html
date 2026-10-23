@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>hxlog/dsh-mcp-tools — capability card (C3) · dsh-xray</title>
-<meta name="description" content="hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server in development tooling the package does not ship, reads credential-class env vars.">
+<meta name="description" content="hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars, reads credential-class env vars in development tooling the package does not ship.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/hxlog__dsh-mcp-tools.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hxlog/dsh-mcp-tools — dsh plugin capability card">
-<meta property="og:description" content="hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server in development tooling the package does not ship, reads credential-class env vars.">
+<meta property="og:description" content="hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars, reads credential-class env vars in development tooling the package does not ship.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/hxlog__dsh-mcp-tools.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-mcp-tools", "identifier": "hxlog/dsh-mcp-tools", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server in development tooling the package does not ship, reads credential-class env vars.", "codeRepository": "https://github.com/hxlog/dsh-mcp-tools", "url": "https://unstone.github.io/dsh-xray/p/hxlog__dsh-mcp-tools.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-mcp-tools", "identifier": "hxlog/dsh-mcp-tools", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars, reads credential-class env vars in development tooling the package does not ship.", "codeRepository": "https://github.com/hxlog/dsh-mcp-tools", "url": "https://unstone.github.io/dsh-xray/p/hxlog__dsh-mcp-tools.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,12 +49,12 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/hxlog/dsh-mcp-tools" rel="nofollow ugc">hxlog/dsh-mcp-tools source on GitHub</a>
      · <a href="../registry.html#hxlog__dsh-mcp-tools">this plugin in the registry</a></p>
-  <p>hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server in development tooling the package does not ship, reads credential-class env vars.</p>
+  <p>hxlog/dsh-mcp-tools is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars, reads credential-class env vars in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. scripts/smoke.mjs:5, scripts/smoke.mjs:5</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. scripts/browser-login.mjs:32, scripts/browser-login.mjs:41</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>MCP_KEY</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: GUI_AUTHORITY, GUI_COOKIE_MINUTES, PHARMCUBE_TOKEN</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. scripts/smoke.mjs:5, scripts/smoke.mjs:5</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>MCP_KEY</td></tr><tr><td>reads credential-class env vars in development tooling the package does not ship</td><td><code>token_env_tooling</code></td><td>in development tooling the package does not ship: PHARMCUBE_TOKEN</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span> <span>tools</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>mcp-server-global.comein.cn</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>mcp.example.com</span></p>
   <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_PROFILE</span> <span>MCP_KEY</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin

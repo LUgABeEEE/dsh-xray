@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>wing-tn/astro-ph-researcher — capability card (C3) · dsh-xray</title>
-<meta name="description" content="wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes commands in development tooling the package does not ship, base64 decoding in build output only.">
+<meta name="description" content="wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes system commands, base64 decoding in build output only.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/wing-tn__astro-ph-researcher.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="wing-tn/astro-ph-researcher — dsh plugin capability card">
-<meta property="og:description" content="wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes commands in development tooling the package does not ship, base64 decoding in build output only.">
+<meta property="og:description" content="wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes system commands, base64 decoding in build output only.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/wing-tn__astro-ph-researcher.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "astro-ph-researcher", "identifier": "wing-tn/astro-ph-researcher", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes commands in development tooling the package does not ship, base64 decoding in build output only.", "codeRepository": "https://github.com/wing-tn/astro-ph-researcher", "url": "https://unstone.github.io/dsh-xray/p/wing-tn__astro-ph-researcher.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "astro-ph-researcher", "identifier": "wing-tn/astro-ph-researcher", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes system commands, base64 decoding in build output only.", "codeRepository": "https://github.com/wing-tn/astro-ph-researcher", "url": "https://unstone.github.io/dsh-xray/p/wing-tn__astro-ph-researcher.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">Astronomy research workbench for DSH and Codex: NADC terms, references, writing, scoring, author confirmation, physics/recommended books, FITS/XML formats and analysis guides.</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/wing-tn/astro-ph-researcher" rel="nofollow ugc">wing-tn/astro-ph-researcher source on GitHub</a>
      · <a href="../registry.html#wing-tn__astro-ph-researcher">this plugin in the registry</a></p>
-  <p>wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes commands in development tooling the package does not ship, base64 decoding in build output only.</p>
+  <p>wing-tn/astro-ph-researcher is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, executes system commands, base64 decoding in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, webServer</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×3 in development tooling the package does not ship, e.g. scripts/pdf-print.mjs:1, scripts/pdf-print.mjs:1</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/writing.js:207</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>ADS_API_TOKEN, OPENALEX_API_KEY</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, webServer</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. codex/scripts/open-ui.mjs:2, codex/scripts/open-ui.mjs:16</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. lib/writing.js:207</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. codex/ui/server.mjs:14</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>ADS_API_TOKEN, OPENALEX_API_KEY</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>skills</span> <span>slots</span> <span>systemPrompt</span> <span>tools</span> <span>webServer</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>nadc.china-vo.org</span> <span>doi.org</span> <span>iopscience.iop.org</span> <span>journals.aps.org</span> <span>search.cnki.com.cn</span> <span>ui.adsabs.harvard.edu</span> <span>kns.cnki.net</span> <span>cxc.cfa.harvard.edu</span> <span>journals.aas.org</span> <span>www.aanda.org</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>ADS_API_TOKEN</span> <span>OPENALEX_API_KEY</span> <span>ASTRO_WORDS_MAILTO</span> <span>ASTRO_PH_RESEARCHER_HOME</span> <span>DSH_HOME</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>doi.org</span> <span>nadc.china-vo.org</span> <span>iopscience.iop.org</span> <span>search.cnki.com.cn</span> <span>ui.adsabs.harvard.edu</span> <span>journals.aps.org</span> <span>api.crossref.org</span> <span>export.arxiv.org</span> <span>arxiv.org</span> <span>kns.cnki.net</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>ADS_API_TOKEN</span> <span>OPENALEX_API_KEY</span> <span>ASTRO_UI_LIBRARY</span> <span>ASTRO_WORDS_MAILTO</span> <span>ASTRO_PH_RESEARCHER_HOME</span> <span>DSH_HOME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

@@ -53,9 +53,9 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>DSH_CONTEXTINJECTOR_CACHED_PREFIX_TOKENS</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>llm</span> <span>slots</span> <span>subagents</span> <span>tools</span> <span>webServer</span></p>
-  <h2>Hooks it attaches</h2><p class="kv"><span>agent/pre-step</span> <span>agent/request</span> <span>agent/turn-stopping</span> <span>session/event</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>agent/pre-step</span> <span>agent/request</span> <span>dispose</span> <span>session/event</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>LOGCOMPILER_OUT</span> <span>DSH_HOME</span> <span>DSH_CONTEXTINJECTOR_STATE_DIR</span> <span>DSH_CONTEXTINJECTOR_FOLD_JOIN_MS</span> <span>EXTREASON_DIGEST_MAX</span> <span>EXTREASON_TEST_PROMPT</span> <span>LOGCOMPILER_LOGS_DIR</span> <span>DSH_CONTEXTINJECTOR_ENABLED</span> <span>DSH_CONTEXTINJECTOR_OUT</span> <span>DSH_CONTEXTINJECTOR_THRESHOLD</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>LOGCOMPILER_OUT</span> <span>DSH_HOME</span> <span>DSH_CONTEXTINJECTOR_STATE_DIR</span> <span>DSH_CONTEXTINJECTOR_FOLD_JOIN_MS</span> <span>EXTREASON_DIGEST_MAX</span> <span>EXTREASON_TEST_PROMPT</span> <span>LOGCOMPILER_LOGS_DIR</span> <span>DSH_MEMORY_DB</span> <span>DSH_MEMORY</span> <span>DSH_MEMORY_LLM</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

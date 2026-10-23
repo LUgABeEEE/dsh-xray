@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>mrbeandev/dsh-image-edge-cap</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DeepSeek Harness plugin that caps the longest side of images sent to chosen providers or models (default 2000 px), with its own Settings tab</p>
+  <p class="lede">DeepSeek Harness plugin that limits the images sent to chosen providers or models: cap the longest side and the number of images per request, from its own plugin page</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/mrbeandev/dsh-image-edge-cap" rel="nofollow ugc">mrbeandev/dsh-image-edge-cap source on GitHub</a>
      · <a href="../registry.html#mrbeandev__dsh-image-edge-cap">this plugin in the registry</a></p>
   <p>mrbeandev/dsh-image-edge-cap is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. scripts/check-release.mjs:11, scripts/check-release.mjs:11</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. scripts/e2e-gui.mjs:81</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. scripts/check-release.mjs:11, scripts/check-release.mjs:11</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. scripts/e2e-gui.mjs:89</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>llm</span> <span>remote</span> <span>slots</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>llm/stream</span></p>
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_E2E_URL</span> <span>CHROME</span> <span>DSH_E2E_SHOTS</span> <span>DSH_E2E_PROVIDER</span> <span>DSH_E2E_EXPECT</span> <span>DSH_TEST_HARNESS_ENTRY</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_E2E_URL</span> <span>CHROME</span> <span>DSH_E2E_SHOTS</span> <span>DSH_E2E_PROVIDER</span> <span>DSH_E2E_MODEL</span> <span>DSH_E2E_EXPECT</span> <span>DSH_E2E_ABSENT</span> <span>DSH_TEST_HARNESS_ENTRY</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

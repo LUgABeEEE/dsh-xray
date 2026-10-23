@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">DSH 原生抖音助手：有限自主观看、共享人格与兴趣记忆、原生设置和观看日报。</p>
-  <p class="lede">★ 1+ ·
+  <p class="lede">★ 5+ ·
      <a href="https://github.com/LockyBee/dsh-douyin-agent" rel="nofollow ugc">LockyBee/dsh-douyin-agent source on GitHub</a>
      · <a href="../registry.html#LockyBee__dsh-douyin-agent">this plugin in the registry</a></p>
   <p>LockyBee/dsh-douyin-agent is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.bundle.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×14 in authored code, e.g. core.mjs:4, core.mjs:105</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×7 in authored code, e.g. control.mjs:40, core.mjs:609</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. app.mjs:97</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>loader</span> <span>slots</span> <span>tools</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.bundle.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×21 in authored code, e.g. core.mjs:4, core.mjs:105</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×7 in authored code, e.g. control.mjs:40, core.mjs:614</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×1 in authored code, e.g. app.mjs:113</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>connection</span> <span>loader</span> <span>slots</span> <span>tools</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/created</span> <span>agent/disposed</span> <span>session/event</span></p>
-  <h2>Outbound domains</h2><p class="kv"><span>www.douyin.com</span> <span>api.deepseek.com</span> <span>api.minimaxi.com</span> <span>api.xiaomimimo.com</span> <span>codeload.github.com</span> <span>openfontlicense.org</span> <span>api.openai.com</span> <span>api.siliconflow.cn</span> <span>api.deepinfra.com</span> <span>api.fireworks.ai</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>SystemRoot</span> <span>DSH_HOME</span> <span>DOUYIN_API_PORT</span> <span>DEEPSEEK_SHARED_MEMORY_DB</span> <span>NO_PROXY</span> <span>no_proxy</span> <span>HTTPS_PROXY</span> <span>https_proxy</span> <span>HTTP_PROXY</span> <span>http_proxy</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>www.douyin.com</span> <span>api.deepseek.com</span> <span>api.minimaxi.com</span> <span>api.xiaomimimo.com</span> <span>codeload.github.com</span> <span>api.github.com</span> <span>openfontlicense.org</span> <span>api.openai.com</span> <span>api.siliconflow.cn</span> <span>api.deepinfra.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>SystemRoot</span> <span>DSH_HOME</span> <span>DOUYIN_DESKTOP_SMOKE</span> <span>DOUYIN_API_PORT</span> <span>PROGRAMFILES</span> <span>LOCALAPPDATA</span> <span>DEEPSEEK_SHARED_MEMORY_DB</span> <span>NO_PROXY</span> <span>no_proxy</span> <span>HTTPS_PROXY</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

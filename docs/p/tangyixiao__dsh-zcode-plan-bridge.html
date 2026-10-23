@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tangyixiao/dsh-zcode-plan-bridge — capability card (C3) · dsh-xray</title>
-<meta name="description" content="tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.">
+<meta name="description" content="tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, command execution in build output only, reads credential-class env vars.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/tangyixiao__dsh-zcode-plan-bridge.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tangyixiao/dsh-zcode-plan-bridge — dsh plugin capability card">
-<meta property="og:description" content="tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.">
+<meta property="og:description" content="tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, command execution in build output only, reads credential-class env vars.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/tangyixiao__dsh-zcode-plan-bridge.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-zcode-plan-bridge", "identifier": "tangyixiao/dsh-zcode-plan-bridge", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.", "codeRepository": "https://github.com/tangyixiao/dsh-zcode-plan-bridge", "url": "https://unstone.github.io/dsh-xray/p/tangyixiao__dsh-zcode-plan-bridge.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-zcode-plan-bridge", "identifier": "tangyixiao/dsh-zcode-plan-bridge", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, command execution in build output only, reads credential-class env vars.", "codeRepository": "https://github.com/tangyixiao/dsh-zcode-plan-bridge", "url": "https://unstone.github.io/dsh-xray/p/tangyixiao__dsh-zcode-plan-bridge.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>tangyixiao/dsh-zcode-plan-bridge</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DSH 插件：把模型请求经 ZCode 客户端 app-server 反代到 Start Plan 额度（GLM 系列，真流式）。kyle123740/dsh-zcode-cli-proxy 衍生版，默认清单补上 GLM-5.3。</p>
+  <p class="lede">DSH plugin: serves model requests through the ZCode CLI&#x27;s account-backed agent over its own app-server protocol (real streaming, image input, per-session reuse). The model list is read from the CLI, n</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/tangyixiao/dsh-zcode-plan-bridge" rel="nofollow ugc">tangyixiao/dsh-zcode-plan-bridge source on GitHub</a>
      · <a href="../registry.html#tangyixiao__dsh-zcode-plan-bridge">this plugin in the registry</a></p>
-  <p>tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, reads credential-class env vars.</p>
+  <p>tangyixiao/dsh-zcode-plan-bridge is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, command execution in build output only, reads credential-class env vars.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×20 in authored code, e.g. scripts/probe-app-server.cjs:11, scripts/probe-app-server.cjs:20</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>ZCODE_CREDENTIAL_SECRET</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×4 in build output only, e.g. lib/app-server.js:55, lib/app-server.js:328</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>ZCODE_CREDENTIAL_SECRET</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>llm</span></p>
   
   <h2>Outbound domains</h2><p class="kv"><span>zcode.z.ai</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>USERPROFILE</span> <span>ZCODE_CLI_PATH</span> <span>PROBE_WORKSPACE</span> <span>PROBE_PROMPT</span> <span>ZCODE_DATA_BASE_DIR</span> <span>LOCALAPPDATA</span> <span>ProgramFiles</span> <span>ZCODE_CREDENTIAL_SECRET</span> <span>PROBE_MODEL</span> <span>PROBE_PROVIDERS</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>LOCALAPPDATA</span> <span>ProgramFiles</span> <span>ZCODE_CREDENTIAL_SECRET</span> <span>ZCODE_DATA_BASE_DIR</span> <span>ZCODE_CLI_PATH</span> <span>Path</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

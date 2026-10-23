@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>yorelog/dsh-omarchy-agent</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DeepSeek Harness on Omarchy as Agent</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">Help DeepSeek Harness to use your Omarchy desktop.</p>
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/yorelog/dsh-omarchy-agent" rel="nofollow ugc">yorelog/dsh-omarchy-agent source on GitHub</a>
      · <a href="../registry.html#yorelog__dsh-omarchy-agent">this plugin in the registry</a></p>
   <p>yorelog/dsh-omarchy-agent is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, can rewrite the system prompt, gates tool execution, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>[&#x27;./cordis.patch.yml&#x27;, &#x27;./presets/omarchy-general.patch.yml&#x27;]</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, tools/pre-execute</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. src/exec.ts:1</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>systemPrompt</span> <span>tools</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>[&#x27;./cordis.patch.yml&#x27;]</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt, tools/pre-execute</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. src/exec.ts:1</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. scripts/smoke-client.mjs:16</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>slots</span> <span>systemPrompt</span> <span>tools</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>tools/pre-execute</span></p>
   
-  
+  <h2>Environment variables it reads</h2><p class="kv"><span>OMARCHY_PATH</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

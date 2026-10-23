@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>456erddgr/dsh-boo550wt-animation — capability card (C2) · dsh-xray</title>
-<meta name="description" content="456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship, decodes base64 in develo">
+<meta name="description" content="456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/456erddgr__dsh-boo550wt-animation.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="456erddgr/dsh-boo550wt-animation — dsh plugin capability card">
-<meta property="og:description" content="456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship, decodes base64 in develo">
+<meta property="og:description" content="456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/456erddgr__dsh-boo550wt-animation.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-boo550wt-animation", "identifier": "456erddgr/dsh-boo550wt-animation", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship, decodes base64 in development tooling the package does not ship.", "codeRepository": "https://github.com/456erddgr/dsh-boo550wt-animation", "url": "https://unstone.github.io/dsh-xray/p/456erddgr__dsh-boo550wt-animation.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-boo550wt-animation", "identifier": "456erddgr/dsh-boo550wt-animation", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship.", "codeRepository": "https://github.com/456erddgr/dsh-boo550wt-animation", "url": "https://unstone.github.io/dsh-xray/p/456erddgr__dsh-boo550wt-animation.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/456erddgr/dsh-boo550wt-animation" rel="nofollow ugc">456erddgr/dsh-boo550wt-animation source on GitHub</a>
      · <a href="../registry.html#456erddgr__dsh-boo550wt-animation">this plugin in the registry</a></p>
-  <p>456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship, decodes base64 in development tooling the package does not ship.</p>
+  <p>456erddgr/dsh-boo550wt-animation is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, uses eval in development tooling the package does not ship.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×6 in development tooling the package does not ship, e.g. tools/browser-check.mjs:17, tools/browser-check.mjs:126</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. tools/selftest.mjs:80, tools/selftest.mjs:148</td></tr><tr><td>decodes base64 in development tooling the package does not ship</td><td><code>base64_decode_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. tools/browser-check.mjs:325, tools/stills.mjs:217</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×6 in development tooling the package does not ship, e.g. tools/browser-check.mjs:102, tools/browser-check.mjs:119</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>webServer</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×4 in build output only, e.g. lib/games.js:240, lib/games.js:240</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×9 in development tooling the package does not ship, e.g. tools/browser-check.mjs:19, tools/browser-check.mjs:139</td></tr><tr><td>uses eval in development tooling the package does not ship</td><td><code>eval_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. tools/selftest.mjs:127, tools/selftest.mjs:271</td></tr><tr><td>decodes base64 in development tooling the package does not ship</td><td><code>base64_decode_tooling</code></td><td>×4 in development tooling the package does not ship, e.g. tools/browser-check.mjs:520, tools/screenshots.mjs:155</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×10 in development tooling the package does not ship, e.g. tools/browser-check.mjs:110, tools/browser-check.mjs:132</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span> <span>webServer</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>webserver/index-inject</span></p>
   
-  
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
