@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>FYTXY/dsh-hindsight-daemon</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">DSH 插件：Hindsight 记忆服务的随行守护。DSH 启动时拉起本地 daemon，退出时连同嵌入式 PostgreSQL 一起清理干净，并在设置里提供独立页面（含记忆仓库的新建/切换/删除）。支持 Windows 与 Linux。</p>
+  <p class="lede">DSH plugin: lifecycle for the local Hindsight memory daemon. Starts it with DSH, tears it down with its embedded PostgreSQL on exit, and ships its own settings page. Windows and Linux.</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/FYTXY/dsh-hindsight-daemon" rel="nofollow ugc">FYTXY/dsh-hindsight-daemon source on GitHub</a>
      · <a href="../registry.html#FYTXY__dsh-hindsight-daemon">this plugin in the registry</a></p>
@@ -54,8 +54,8 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×24 in build output only, e.g. lib/core/daemon.js:11, lib/core/daemon.js:11</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>pypi.tuna.tsinghua.edu.cn</span> <span>hf-mirror.com</span> <span>api.openai.com</span> <span>api.example.com</span> <span>docs.astral.sh</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>USERPROFILE</span> <span>HF_HOME</span> <span>DSH_HINDSIGHT_DEBUG</span> <span>UV_TOOL_BIN_DIR</span> <span>DSH_HOME</span> <span>UV_TOOL_DIR</span> <span>Path</span> <span>APPDATA</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>api.openai.com</span> <span>pypi.tuna.tsinghua.edu.cn</span> <span>hf-mirror.com</span> <span>docs.astral.sh</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>HF_HOME</span> <span>USERPROFILE</span> <span>UV_TOOL_BIN_DIR</span> <span>DSH_HOME</span> <span>DSH_HINDSIGHT_DEBUG</span> <span>UV_TOOL_DIR</span> <span>Path</span> <span>APPDATA</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

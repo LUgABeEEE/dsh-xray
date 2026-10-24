@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZekaiShi/evo-subagent — capability card (C2) · dsh-xray</title>
-<meta name="description" content="ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime.">
+<meta name="description" content="ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, can rewrite the system prompt.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/ZekaiShi__evo-subagent.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZekaiShi/evo-subagent — dsh plugin capability card">
-<meta property="og:description" content="ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime.">
+<meta property="og:description" content="ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, can rewrite the system prompt.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/ZekaiShi__evo-subagent.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "evo-subagent", "identifier": "ZekaiShi/evo-subagent", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime.", "codeRepository": "https://github.com/ZekaiShi/evo-subagent", "url": "https://unstone.github.io/dsh-xray/p/ZekaiShi__evo-subagent.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "evo-subagent", "identifier": "ZekaiShi/evo-subagent", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, can rewrite the system prompt.", "codeRepository": "https://github.com/ZekaiShi/evo-subagent", "url": "https://unstone.github.io/dsh-xray/p/ZekaiShi__evo-subagent.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>ZekaiShi/evo-subagent</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">Unified DeepSeek Harness plugin: role-based subagent routing + per-agent evolution (prefercmd/memory as knowledge allow/deny lists), so repeated tasks start from proven commands and save tokens. Unifi</p>
+  <p class="lede">跨工作区风格适应与独立人格分配：为工作区、对话配置各自风格，独立学习不回写全局人格，设置保存后即时生效。支持任意已注册模型路由（含通过其他插件接入 Codex、Claude Code），可选关联刷 B 站内容记忆。</p>
   <p class="lede">★ 5+ ·
      <a href="https://github.com/ZekaiShi/evo-subagent" rel="nofollow ugc">ZekaiShi/evo-subagent source on GitHub</a>
      · <a href="../registry.html#ZekaiShi__evo-subagent">this plugin in the registry</a></p>
-  <p>ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime.</p>
+  <p>ZekaiShi/evo-subagent is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, can rewrite the system prompt.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr></tbody></table>
-  <h2>Services it injects</h2><p class="kv"><span>llm</span> <span>subagents</span> <span>tools</span></p>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>can rewrite the system prompt</td><td><code>prompt_surface</code></td><td>systemPrompt</td></tr></tbody></table>
+  <h2>Services it injects</h2><p class="kv"><span>llm</span> <span>subagents</span> <span>systemPrompt</span> <span>tools</span> <span>workingDirectory</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>agent/inbox/claimed</span> <span>agent/status</span> <span>session/event</span></p>
   
-  
-  <h2>Environment variables it reads</h2><p class="kv"><span>EVO_SUBAGENT_EVOLUTION_DIR</span> <span>EVO_SUBAGENT_PROJECTS_DIR</span> <span>EVO_SUBAGENT_BINDINGS_DIR</span> <span>DSH_AGENT_BINDINGS_DIR</span> <span>EVO_SUBAGENT_EVOLUTION</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>EVO_SUBAGENT_EVOLUTION_DIR</span> <span>EVO_SUBAGENT_PROJECTS_DIR</span> <span>EVO_SUBAGENT_BINDINGS_DIR</span> <span>DSH_AGENT_BINDINGS_DIR</span> <span>EVO_SUBAGENT_EVOLUTION</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

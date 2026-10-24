@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>apherchin/dsh-websearch-tavily-keys-select</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">多源网页搜索链：按顺序尝试最多 3 个 Tavily key（Windows 环境变量或明文），失败则回退官方 DeepSeek 搜索；设置页有配置卡片。 | DSH plugin: multi-source web search chain — tries up to 3 Tavily keys in order, falls back to the official DeepSeek sear</p>
+  <p class="lede">DSH（DeepSeek Harness）的 Web 搜索链路插件：源 → key → 额度 三级模型，一个源可放多把 key 各自限流；内置腾讯元宝搜索（SearchPro）、Tavily、DeepSeek 搜索 API。</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/apherchin/dsh-websearch-tavily-keys-select" rel="nofollow ugc">apherchin/dsh-websearch-tavily-keys-select source on GitHub</a>
      · <a href="../registry.html#apherchin__dsh-websearch-tavily-keys-select">this plugin in the registry</a></p>
@@ -54,7 +54,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>web</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>api.tavily.com</span> <span>api.deepseek.com</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>api.deepseek.com</span> <span>api.tavily.com</span> <span>wsa.tencentcloudapi.com</span> <span>console.cloud.tencent.com</span></p>
   <h2>Environment variables it reads</h2><p class="kv"><span>USERPROFILE</span> <span>DSH_HOME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin

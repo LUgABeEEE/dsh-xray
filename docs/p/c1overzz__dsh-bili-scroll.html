@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>c1overzz/dsh-bili-scroll — capability card (C3) · dsh-xray</title>
-<meta name="description" content="c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.">
+<meta name="description" content="c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/c1overzz__dsh-bili-scroll.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c1overzz/dsh-bili-scroll — dsh plugin capability card">
-<meta property="og:description" content="c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.">
+<meta property="og:description" content="c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/c1overzz__dsh-bili-scroll.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-bili-scroll", "identifier": "c1overzz/dsh-bili-scroll", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.", "codeRepository": "https://github.com/c1overzz/dsh-bili-scroll", "url": "https://unstone.github.io/dsh-xray/p/c1overzz__dsh-bili-scroll.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-bili-scroll", "identifier": "c1overzz/dsh-bili-scroll", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.", "codeRepository": "https://github.com/c1overzz/dsh-bili-scroll", "url": "https://unstone.github.io/dsh-xray/p/c1overzz__dsh-bili-scroll.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -46,16 +46,16 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <span class="lvl-pill">C3</span>
   </div>
   <p class="lede">DSH 插件：每天替你刷一轮 B站，读字幕挑出值得的、写一份日报，值得的 @ 你</p>
-  <p class="lede">★ 100+ ·
+  <p class="lede">★ 500+ ·
      <a href="https://github.com/c1overzz/dsh-bili-scroll" rel="nofollow ugc">c1overzz/dsh-bili-scroll source on GitHub</a>
      · <a href="../registry.html#c1overzz__dsh-bili-scroll">this plugin in the registry</a></p>
-  <p>c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
+  <p>c1overzz/dsh-bili-scroll is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×11 in authored code, e.g. index.js:25, index.js:1205</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×11 in authored code, e.g. index.js:25, index.js:1375</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. index.js:630</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>settings</span> <span>slots</span> <span>tools</span> <span>webServer</span></p>
   
   <h2>Outbound domains</h2><p class="kv"><span>api.bilibili.com</span> <span>www.bilibili.com</span> <span>pypi.tuna.tsinghua.edu.cn</span> <span>api.github.com</span> <span>mirrors.ustc.edu.cn</span> <span>mirrors.aliyun.com</span> <span>message.bilibili.com</span> <span>api.vc.bilibili.com</span> <span>passport.bilibili.com</span> <span>hf-mirror.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>APPDATA</span> <span>BILI_DUTY_PIP_MIRROR</span> <span>BILI_DUTY_VENV_PYTHON</span> <span>ProgramFiles</span> <span>BILI_DUTY_HF_ENDPOINT</span> <span>BILI_DUTY_AV_PIN</span> <span>SystemRoot</span> <span>DSH_HOST_MODULES</span> <span>USERPROFILE</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>APPDATA</span> <span>BILI_DUTY_PIP_MIRROR</span> <span>BILI_DUTY_VENV_PYTHON</span> <span>ProgramFiles</span> <span>BILI_DUTY_HF_ENDPOINT</span> <span>LOCALAPPDATA</span> <span>BILI_DUTY_AV_PIN</span> <span>SystemRoot</span> <span>DSH_HOST_MODULES</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sama05/dsh-download-progress — capability card (C3) · dsh-xray</title>
-<meta name="description" content="Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, starts a network server.">
+<meta name="description" content="Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/Sama05__dsh-download-progress.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sama05/dsh-download-progress — dsh plugin capability card">
-<meta property="og:description" content="Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, starts a network server.">
+<meta property="og:description" content="Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/Sama05__dsh-download-progress.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-download-progress", "identifier": "Sama05/dsh-download-progress", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, starts a network server.", "codeRepository": "https://github.com/Sama05/dsh-download-progress", "url": "https://unstone.github.io/dsh-xray/p/Sama05__dsh-download-progress.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-download-progress", "identifier": "Sama05/dsh-download-progress", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server.", "codeRepository": "https://github.com/Sama05/dsh-download-progress", "url": "https://unstone.github.io/dsh-xray/p/Sama05__dsh-download-progress.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/Sama05/dsh-download-progress" rel="nofollow ugc">Sama05/dsh-download-progress source on GitHub</a>
      · <a href="../registry.html#Sama05__dsh-download-progress">this plugin in the registry</a></p>
-  <p>Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, starts a network server.</p>
+  <p>Sama05/dsh-download-progress is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, starts a network server.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×4 in authored code, e.g. smoke-host.mjs:238, smoke-host.mjs:242</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×18 in authored code, e.g. lab/e2e-script.mjs:18, lab/e2e-script.mjs:35</td></tr><tr><td>starts a network server</td><td><code>net_server</code></td><td>×6 in authored code, e.g. smoke-host.mjs:995, smoke-host.mjs:999</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span> <span>webServer</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>plugin-manager/install-log</span> <span>plugin-manager/install-state</span> <span>subagent/end</span> <span>subagent/start</span> <span>tools/execute</span> <span>workflow/end</span> <span>workflow/log</span> <span>workflow/phase</span> <span>workflow/start</span></p>
-  <h2>Outbound domains</h2><p class="kv"><span>registry.npmmirror.com</span></p>
-  
+  <h2>Outbound domains</h2><p class="kv"><span>registry.npmmirror.com</span> <span>e.com</span> <span>npmmirror.com</span> <span>software-download.microsoft.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>LAB_PORT</span> <span>LAB_RATE</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
