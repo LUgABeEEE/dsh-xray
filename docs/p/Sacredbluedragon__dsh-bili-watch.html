@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>Sacredbluedragon/dsh-bili-watch</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">给模型看 B 站视频的 DSH 插件：字幕、转写、抽帧 OCR、评论与弹幕。</p>
-  <p class="lede">★ 0 ·
+  <p class="lede">给模型看 B 站视频的 DSH 插件：字幕、转写、抽帧 OCR、评论与弹幕；支持 b23.tv 短链，抽帧缓存目录可换。</p>
+  <p class="lede">★ 1+ ·
      <a href="https://github.com/Sacredbluedragon/dsh-bili-watch" rel="nofollow ugc">Sacredbluedragon/dsh-bili-watch source on GitHub</a>
      · <a href="../registry.html#Sacredbluedragon__dsh-bili-watch">this plugin in the registry</a></p>
   <p>Sacredbluedragon/dsh-bili-watch is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×22 in authored code, e.g. index.js:12, index.js:109</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×23 in authored code, e.g. index.js:12, index.js:143</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>agents</span> <span>commands</span> <span>slots</span> <span>webServer</span></p>
   <h2>Hooks it attaches</h2><p class="kv"><span>agent/pre-step</span></p>
   <h2>Outbound domains</h2><p class="kv"><span>api.bilibili.com</span> <span>www.bilibili.com</span> <span>passport.bilibili.com</span> <span>hf-mirror.com</span> <span>comment.bilibili.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>BILI_WATCH_PROJ</span> <span>BILI_WATCH_FFMPEG</span> <span>HF_ENDPOINT</span> <span>BILI_WATCH_SEEN</span> <span>BILI_WATCH_YTDLP</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>BILI_WATCH_PROJ</span> <span>BILI_WATCH_CACHE</span> <span>BILI_WATCH_FFMPEG</span> <span>HF_ENDPOINT</span> <span>BILI_WATCH_SEEN</span> <span>BILI_WATCH_YTDLP</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

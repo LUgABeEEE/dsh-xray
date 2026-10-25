@@ -45,7 +45,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>KLRSL/dsh-packer</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">dsh-packer：把本地 DSH 资产（Skills / 会话 / Profile / 设置 / 记忆）按模块打包成 zip（v0.3.0，纯 JS 实现，不调用外部命令）——迁移、分享、恢复与隐私扫描。Pack your DSH assets into modules for migration and sharing.</p>
+  <p class="lede">把 Skills、会话、已装插件和设置封成一个 zip，换电脑时一键开箱；敏感内容先脱敏或加密。Seals your Skills, sessions, plugins and settings into one zip and unseals them on a new machine.</p>
   <p class="lede">★ 1+ ·
      <a href="https://github.com/KLRSL/dsh-packer" rel="nofollow ugc">KLRSL/dsh-packer source on GitHub</a>
      · <a href="../registry.html#KLRSL__dsh-packer">this plugin in the registry</a></p>
@@ -55,7 +55,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <h2>Services it injects</h2><p class="kv"><span>slots</span></p>
   
   
-  
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_BIOMEMORY_DIR</span> <span>USERNAME</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

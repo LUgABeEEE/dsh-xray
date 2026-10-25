@@ -2,7 +2,7 @@
 
 > Capability cards for DeepSeek Harness (dsh) plugins: what a plugin declares versus what its shipped code actually does, each finding carrying file:line evidence. Static analysis only — nothing is executed, and levels measure capability surface and transparency, not maliciousness.
 
-Data as of 2026-10-24: 20789 plugins scanned out of 21127 known repositories.
+Data as of 2026-10-25: 21452 plugins scanned out of 21801 known repositories.
 
 ## Key pages
 - [Registry](https://unstone.github.io/dsh-xray/registry.html): searchable capability cards for every scanned plugin.

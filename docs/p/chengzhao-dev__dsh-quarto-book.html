@@ -45,17 +45,17 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>chengzhao-dev/dsh-quarto-book</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">为 Quarto Book 写章节、检查结构并维护主题。</p>
+  <p class="lede">把一份 Quarto Book 写成可读、可查、可发布的中文技术书：九步写作、结构/链接/图表检查、统一主题与渲染验收。</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/chengzhao-dev/dsh-quarto-book" rel="nofollow ugc">chengzhao-dev/dsh-quarto-book source on GitHub</a>
      · <a href="../registry.html#chengzhao-dev__dsh-quarto-book">this plugin in the registry</a></p>
   <p>chengzhao-dev/dsh-quarto-book is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×1 in authored code, e.g. src/tools/render-check.ts:3</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×7 in authored code, e.g. scripts/checking-lib.mjs:3, scripts/checking-lib.mjs:3</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>skills</span> <span>tools</span></p>
   
   
-  <h2>Environment variables it reads</h2><p class="kv"><span>PYTHON</span> <span>NODE_PATH</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>PYTHON</span> <span>npm_execpath</span> <span>NODE_PATH</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is
