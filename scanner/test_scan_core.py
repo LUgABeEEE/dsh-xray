@@ -284,11 +284,48 @@ def test_entry_points_are_packed_whatever_files_says():
 
 
 def test_unmodelled_patterns_fail_closed():
-    """A negation reorders the whole walk and extglob is not implemented; when
-    the allowlist cannot be read exactly, nothing is demoted."""
-    for allow in (['lib', '!lib/secret.js'], ['+(lib|src)'], ['lib/{a..z}.js']):
+    """extglob and brace ranges are not implemented; when the allowlist cannot
+    be read exactly, nothing is demoted."""
+    for allow in (['+(lib|src)'], ['lib/{a..z}.js']):
         c = card({'package.json': _pkg(files=allow), 'scripts/x.mjs': EXEC})
         check(f'fail-closed/{allow[0]}', 'exec' in {f['id'] for f in c['flags']}, True)
+
+
+def test_a_negation_is_modelled_rather_than_failing_closed():
+    """files is read in order and the last match wins, so a "!" is only ever
+    honoured by modelling that order. Failing closed on one demoted nothing:
+    a single "!docs/screenshots/demo.mp4" in LUgABeEEE/dsh-global-todo's files
+    turned its excluded scripts/check.mjs into a scored exec and moved the card
+    from C2 to C3, while the entry it negated only trimmed an asset the
+    allowlist never shipped. github.com/unStone/dsh-xray/issues/7
+    """
+    c = card({'package.json': _pkg(files=['lib', 'scripts', '!scripts']), 'scripts/x.mjs': EXEC})
+    ids = {f['id'] for f in c['flags']}
+    check('negation/excluded', 'exec' in ids, False)
+    check('negation/reported', 'exec_tooling' in ids, True)
+
+
+def test_a_negation_of_an_unshipped_asset_changes_nothing_else():
+    c = card({'package.json': _pkg(files=['lib', '!docs/screenshots/demo.mp4']),
+              'lib/index.js': 'export function apply(ctx) {}',
+              'scripts/check.mjs': EXEC})
+    ids = {f['id'] for f in c['flags']}
+    check('negation-asset/not-counted', 'exec' in ids, False)
+    check('negation-asset/reported', 'exec_tooling' in ids, True)
+
+
+def test_a_later_entry_beats_an_earlier_one():
+    c = card({'package.json': _pkg(files=['!scripts', 'scripts']), 'scripts/x.mjs': EXEC})
+    check('order/reincluded', 'exec' in {f['id'] for f in c['flags']}, True)
+    c = card({'package.json': _pkg(files=['scripts', '!scripts']), 'scripts/x.mjs': EXEC})
+    check('order/excluded', 'exec' in {f['id'] for f in c['flags']}, False)
+
+
+def test_a_negation_does_not_override_an_entry_point():
+    """bin is packed whatever files says; a negation must not hide that."""
+    c = card({'package.json': _pkg(files=['lib', '!scripts'], bin={'p': './scripts/cli.js'}),
+              'scripts/cli.js': EXEC})
+    check('negation-bin/still-packed', 'exec' in {f['id'] for f in c['flags']}, True)
 
 
 def test_brace_and_class_patterns_are_understood():
