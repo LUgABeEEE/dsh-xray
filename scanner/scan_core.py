@@ -167,6 +167,9 @@ def _pattern_re(pat):
     segments -- so `scripts/**/*.mjs` includes the direct child
     `scripts/proxy.mjs`. Python's fnmatch does not, and a translation that
     misses that would hide execution code a plugin genuinely ships.
+
+    A leading "!" is stripped by the caller, which keeps the entries in order
+    because npm lets a later entry override an earlier one.
     """
     if not isinstance(pat, str):
         return None
@@ -210,12 +213,18 @@ def _pack_matcher(data):
         # Installing from a git ref runs the checkout rather than the packed
         # tarball, and an install-time script can reach anything in it.
         return None
-    pats = []
+    pats = []                  # (regex, negated), in the order npm reads them
     for entry in allow:
-        r = _pattern_re(entry)
+        if not isinstance(entry, str):
+            return None
+        text = entry.strip()
+        negated = text.startswith('!')
+        if negated:
+            text = text[1:].strip()
+        r = _pattern_re(text)
         if r is None:
             return None        # one pattern we cannot model: demote nothing
-        pats.append(r)
+        pats.append((r, negated))
 
     forced = set()
 
@@ -244,7 +253,12 @@ def _pack_matcher(data):
             return True
         if rel in forced or any(rel.startswith(f + '/') for f in forced):
             return True
-        return any(r.match(rel) for r in pats)
+        # The last entry that matches decides, which is how npm resolves a
+        # negation: ["lib", "!lib/generated"] packs lib/ minus that directory.
+        for r, negated in reversed(pats):
+            if r.match(rel):
+                return not negated
+        return False
 
     return packed
 
