@@ -54,8 +54,8 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×12 in development tooling the package does not ship, e.g. scripts/check-syntax.mjs:4, scripts/check-syntax.mjs:4</td></tr><tr><td>network server in build output only</td><td><code>net_server_bundled</code></td><td>×2 in build output only, e.g. lib/ports.js:34, lib/relay.js:209</td></tr><tr><td>starts a network server in development tooling the package does not ship</td><td><code>net_server_tooling</code></td><td>×2 in development tooling the package does not ship, e.g. scripts/install-smoke.mjs:105, scripts/install-smoke.mjs:106</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>slots</span></p>
   
-  <h2>Outbound domains</h2><p class="kv"><span>api.telegram.org</span> <span>openrouter.ai</span> <span>generativelanguage.googleapis.com</span> <span>api.moonshot.cn</span> <span>api.deepseek.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_PROFILE_DIR</span></p>
+  <h2>Outbound domains</h2><p class="kv"><span>api.moonshot.cn</span> <span>openrouter.ai</span> <span>generativelanguage.googleapis.com</span> <span>api.deepseek.com</span> <span>api.telegram.org</span> <span>api.moonshot.ai</span> <span>api.openai.com</span> <span>api.anthropic.com</span> <span>api.x.ai</span> <span>api.groq.com</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>DSH_HOME</span> <span>DSH_PROFILE_DIR</span> <span>EGRESS_PI_AI_DIR</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

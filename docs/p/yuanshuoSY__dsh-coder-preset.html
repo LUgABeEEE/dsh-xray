@@ -45,13 +45,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>yuanshuoSY/dsh-coder-preset</h1>
     <span class="lvl-pill">C2</span>
   </div>
-  <p class="lede">Coder agent preset for DeepSeek Harness, bundling 35 Matt Pocock engineering skills scoped to Coder sessions. Configuration and Markdown only.</p>
-  <p class="lede">★ 1+ ·
+  <p class="lede">DeepSeek Harness 的 Coder 预设，集成了 35 项 Matt Pocock 在工程方面的技能，专用于 Coder 会话</p>
+  <p class="lede">★ 0 ·
      <a href="https://github.com/yuanshuoSY/dsh-coder-preset" rel="nofollow ugc">yuanshuoSY/dsh-coder-preset source on GitHub</a>
      · <a href="../registry.html#yuanshuoSY__dsh-coder-preset">this plugin in the registry</a></p>
   <p>yuanshuoSY/dsh-coder-preset is a DeepSeek Harness plugin rated C2 — one powerful capability or sensitive behavior. It patches the dsh runtime, command execution in build output only, executes commands in development tooling the package does not ship, eval in build output only.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×4 in build output only, e.g. scripts/lib/dsh-install.mjs:6, scripts/lib/dsh-install.mjs:6</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×11 in development tooling the package does not ship, e.g. scripts/check-version-gate.mjs:8, scripts/check-version-gate.mjs:8</td></tr><tr><td>eval in build output only</td><td><code>eval_bundled</code></td><td>×2 in build output only, e.g. scripts/lib/skill-catalog.mjs:51, scripts/lib/skill-catalog.mjs:53</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>command execution in build output only</td><td><code>exec_bundled</code></td><td>×7 in build output only, e.g. scripts/lib/dsh-install.mjs:6, scripts/lib/dsh-install.mjs:6</td></tr><tr><td>executes commands in development tooling the package does not ship</td><td><code>exec_tooling</code></td><td>×8 in development tooling the package does not ship, e.g. scripts/check-version-gate.mjs:8, scripts/check-version-gate.mjs:8</td></tr><tr><td>eval in build output only</td><td><code>eval_bundled</code></td><td>×2 in build output only, e.g. scripts/lib/skill-catalog.mjs:51, scripts/lib/skill-catalog.mjs:53</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>tools</span></p>
   
   

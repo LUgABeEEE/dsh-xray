@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>stvlynn/dsh.fish — capability card (C3) · dsh-xray</title>
-<meta name="description" content="stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, base64 decoding in build output only, reads credential-class env vars.">
+<meta name="description" content="stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/stvlynn__dsh.fish.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="stvlynn/dsh.fish — dsh plugin capability card">
-<meta property="og:description" content="stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, base64 decoding in build output only, reads credential-class env vars.">
+<meta property="og:description" content="stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/stvlynn__dsh.fish.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh.fish", "identifier": "stvlynn/dsh.fish", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, base64 decoding in build output only, reads credential-class env vars.", "codeRepository": "https://github.com/stvlynn/dsh.fish", "url": "https://unstone.github.io/dsh-xray/p/stvlynn__dsh.fish.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh.fish", "identifier": "stvlynn/dsh.fish", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.", "codeRepository": "https://github.com/stvlynn/dsh.fish", "url": "https://unstone.github.io/dsh-xray/p/stvlynn__dsh.fish.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
   <p class="lede">★ 1+ ·
      <a href="https://github.com/stvlynn/dsh.fish" rel="nofollow ugc">stvlynn/dsh.fish source on GitHub</a>
      · <a href="../registry.html#stvlynn__dsh.fish">this plugin in the registry</a></p>
-  <p>stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, base64 decoding in build output only, reads credential-class env vars.</p>
+  <p>stvlynn/dsh.fish is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×9 in authored code, e.g. frontend/scripts/deploy-production.mjs:1, frontend/scripts/deploy-production.mjs:31</td></tr><tr><td>base64 decoding in build output only</td><td><code>base64_decode_bundled</code></td><td>×1 in build output only, e.g. frontend/src/shared/lib/og/og-image.ts:82</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>INDEXNOW_KEY, REMOTION_GOOGLE_MAPS_API_KEY, REMOTION_MAPTILER_KEY</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×11 in authored code, e.g. scripts/deploy-vps.mjs:1, scripts/deploy-vps.mjs:14</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×3 in authored code, e.g. frontend/server/admission.ts:2, frontend/server/admission.ts:33</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×1 in authored code, e.g. frontend/vite.config.ts:80</td></tr><tr><td>reads credential-class env vars</td><td><code>token_env</code></td><td>INDEXNOW_KEY, REMOTION_GOOGLE_MAPS_API_KEY, REMOTION_MAPTILER_KEY</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>locale</span> <span>slots</span> <span>tools</span></p>
   
   <h2>Outbound domains</h2><p class="kv"><span>api.maptiler.com</span> <span>dsh.fish</span> <span>api.devin.ai</span> <span>api.github.com</span> <span>fonts.googleapis.com</span> <span>www.sitemaps.org</span> <span>cesium.com</span> <span>cloud.maptiler.com</span> <span>developers.google.com</span> <span>www.maptiler.com</span></p>
-  <h2>Environment variables it reads</h2><p class="kv"><span>REMOTION_MAPTILER_KEY</span> <span>DSH_E2E_WORKER_CONFIG</span> <span>REMOTION_GOOGLE_MAPS_API_KEY</span> <span>ADA_PROBE_REPO</span> <span>LIVE_ADA_PROBE</span> <span>CHROMIUM_EXECUTABLE_PATH</span> <span>PUBLIC_BASE_URL</span> <span>INDEXNOW_KEY</span></p>
+  <h2>Environment variables it reads</h2><p class="kv"><span>REMOTION_MAPTILER_KEY</span> <span>DSH_RUNTIME</span> <span>DSH_E2E_WORKER_CONFIG</span> <span>REMOTION_GOOGLE_MAPS_API_KEY</span> <span>ADA_PROBE_REPO</span> <span>ADA_PROBE_COUNT</span> <span>LIVE_ADA_PROBE</span> <span>DSH_VPS_HOST</span> <span>DSH_RELEASE</span> <span>CHROMIUM_EXECUTABLE_PATH</span></p>
   <h2>How to read this</h2>
   <p>Levels measure capability surface and transparency, not maliciousness. A C3 plugin
   can be entirely legitimate — a desktop shell genuinely needs subprocesses. The point is

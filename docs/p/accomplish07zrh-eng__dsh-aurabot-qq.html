@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>accomplish07zrh-eng/dsh-aurabot-qq — capability card (C3) · dsh-xray</title>
-<meta name="description" content="accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
+<meta name="description" content="accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/accomplish07zrh-eng__dsh-aurabot-qq.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="accomplish07zrh-eng/dsh-aurabot-qq — dsh plugin capability card">
-<meta property="og:description" content="accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.">
+<meta property="og:description" content="accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/accomplish07zrh-eng__dsh-aurabot-qq.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-aurabot-qq", "identifier": "accomplish07zrh-eng/dsh-aurabot-qq", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.", "codeRepository": "https://github.com/accomplish07zrh-eng/dsh-aurabot-qq", "url": "https://unstone.github.io/dsh-xray/p/accomplish07zrh-eng__dsh-aurabot-qq.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-aurabot-qq", "identifier": "accomplish07zrh-eng/dsh-aurabot-qq", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.", "codeRepository": "https://github.com/accomplish07zrh-eng/dsh-aurabot-qq", "url": "https://unstone.github.io/dsh-xray/p/accomplish07zrh-eng__dsh-aurabot-qq.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,13 +45,13 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>accomplish07zrh-eng/dsh-aurabot-qq</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">DeepSeek Harness 插件：让 AI 以「大肥鱼」的身份住进 QQ（SnowLuma / OneBot v11）</p>
-  <p class="lede">★ 5+ ·
+  <p class="lede">DeepSeek Harness 插件：让 AI 以「大肥鱼」住进 QQ（SnowLuma / OneBot v11）。表情、语音、记忆、空间、B 站、翻唱、生图全部模块化——可关、可换、可本地自写扩展，连群聊策略、提示词、回复和模型都能改，保存即生效。</p>
+  <p class="lede">★ 10+ ·
      <a href="https://github.com/accomplish07zrh-eng/dsh-aurabot-qq" rel="nofollow ugc">accomplish07zrh-eng/dsh-aurabot-qq source on GitHub</a>
      · <a href="../registry.html#accomplish07zrh-eng__dsh-aurabot-qq">this plugin in the registry</a></p>
-  <p>accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, decodes base64 payloads.</p>
+  <p>accomplish07zrh-eng/dsh-aurabot-qq is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands, uses eval / new Function, decodes base64 payloads.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×13 in authored code, e.g. src/host.js:505, src/host.js:506</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×3 in authored code, e.g. src/chat/hub.js:496, src/chat/hub.js:543</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×12 in authored code, e.g. src/host.js:482, src/snowluma/manager.js:7</td></tr><tr><td>uses eval / new Function</td><td><code>eval</code></td><td>×1 in authored code, e.g. client/client.js:1556</td></tr><tr><td>decodes base64 payloads</td><td><code>base64_decode</code></td><td>×3 in authored code, e.g. src/chat/hub.js:561, src/chat/hub.js:608</td></tr></tbody></table>
   
   <h2>Hooks it attaches</h2><p class="kv"><span>session/event</span></p>
   <h2>Outbound domains</h2><p class="kv"><span>api.bilibili.com</span> <span>www.bilibili.com</span> <span>mirrors.aliyun.com</span> <span>cdn.jsdelivr.net</span> <span>music.163.com</span> <span>registry.npmmirror.com</span> <span>hf-mirror.com</span> <span>huggingface.co</span> <span>api.siliconflow.cn</span> <span>download.pytorch.org</span></p>

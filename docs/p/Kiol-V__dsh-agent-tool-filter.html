@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kiol-V/dsh-agent-tool-filter — capability card (C3) · dsh-xray</title>
-<meta name="description" content="Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.">
+<meta name="description" content="Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands.">
 <link rel="canonical" href="https://unstone.github.io/dsh-xray/p/Kiol-V__dsh-agent-tool-filter.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kiol-V/dsh-agent-tool-filter — dsh plugin capability card">
-<meta property="og:description" content="Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.">
+<meta property="og:description" content="Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands.">
 <meta property="og:url" content="https://unstone.github.io/dsh-xray/p/Kiol-V__dsh-agent-tool-filter.html">
 <meta property="og:image" content="https://unstone.github.io/dsh-xray/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@ main h2 { font-size:16px; margin:26px 0 6px; }
 .kv span { background:var(--chip-bg); border-radius:6px; padding:2px 8px; font-size:12.5px; display:inline-block; margin:2px 2px 2px 0; }
 .lede { color:var(--muted); margin:8px 0 4px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-agent-tool-filter", "identifier": "Kiol-V/dsh-agent-tool-filter", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.", "codeRepository": "https://github.com/Kiol-V/dsh-agent-tool-filter", "url": "https://unstone.github.io/dsh-xray/p/Kiol-V__dsh-agent-tool-filter.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "dsh-agent-tool-filter", "identifier": "Kiol-V/dsh-agent-tool-filter", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any", "description": "Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands.", "codeRepository": "https://github.com/Kiol-V/dsh-agent-tool-filter", "url": "https://unstone.github.io/dsh-xray/p/Kiol-V__dsh-agent-tool-filter.html"}</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,15 +45,15 @@ main h2 { font-size:16px; margin:26px 0 6px; }
     <h1>Kiol-V/dsh-agent-tool-filter</h1>
     <span class="lvl-pill">C3</span>
   </div>
-  <p class="lede">Per-agent tool filter for the main agent (orchestrator) in DeepSeek Harness — minimal toolset for the orchestrator, full toolset for subagents.</p>
+  <p class="lede">Per-agent tool filter for the main agent (orchestrator) in DeepSeek Harness — minimal toolset for the orchestrator, full toolset for subagents, plus a user-approved elevated permissions bridge for sub</p>
   <p class="lede">★ 0 ·
      <a href="https://github.com/Kiol-V/dsh-agent-tool-filter" rel="nofollow ugc">Kiol-V/dsh-agent-tool-filter source on GitHub</a>
      · <a href="../registry.html#Kiol-V__dsh-agent-tool-filter">this plugin in the registry</a></p>
-  <p>Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, executes system commands.</p>
+  <p>Kiol-V/dsh-agent-tool-filter is a DeepSeek Harness plugin rated C3 — powerful capability combined with sensitive behavior. It patches the dsh runtime, gates tool execution, executes system commands.</p>
   <p class="lede"><b>Installable plugin — declares a dsh.bundle manifest</b></p>
-  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×2 in authored code, e.g. scripts/build.mjs:1, scripts/build.mjs:38</td></tr></tbody></table>
+  <h2>What it can do</h2><table><thead><tr><th>Capability</th><th>Flag</th><th>Evidence</th></tr></thead><tbody><tr><td>patches the dsh runtime</td><td><code>runtime_patch</code></td><td>./cordis.patch.yml</td></tr><tr><td>gates tool execution</td><td><code>tool_gate</code></td><td>hook: tools/pre-execute</td></tr><tr><td>executes system commands</td><td><code>exec</code></td><td>×3 in authored code, e.g. scripts/build.mjs:1, scripts/build.mjs:48</td></tr></tbody></table>
   <h2>Services it injects</h2><p class="kv"><span>agents</span> <span>remote</span> <span>slots</span></p>
-  <h2>Hooks it attaches</h2><p class="kv"><span>agent-preset/selected</span> <span>agent/created</span> <span>app-boot/config-reload</span> <span>session/event</span></p>
+  <h2>Hooks it attaches</h2><p class="kv"><span>agent-preset/selected</span> <span>agent/created</span> <span>app-boot/config-reload</span> <span>approval/request</span> <span>session/created</span> <span>session/event</span> <span>tools/pre-execute</span></p>
   
   <h2>Environment variables it reads</h2><p class="kv"><span>ATF_DEBUG_LOG</span> <span>DSH_PROFILE_DIR</span> <span>DSH_HOME</span></p>
   <h2>How to read this</h2>
